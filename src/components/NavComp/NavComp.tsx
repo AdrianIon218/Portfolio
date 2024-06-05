@@ -2,6 +2,7 @@ import { useMemo, useState } from "react";
 import classes from "./NavComp.module.css";
 import { NavLink } from "react-router-dom";
 import toast from "react-hot-toast";
+
 export enum NavTabs {
   CV = "CV",
   PROJECTS = "Projects",

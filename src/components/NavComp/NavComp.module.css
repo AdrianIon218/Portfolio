@@ -1,0 +1,76 @@
+nav {
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: rgb(75, 74, 73);
+  border-bottom: 7px rgb(15, 137, 137) solid;
+  border-bottom-left-radius: 8%;
+  border-bottom-right-radius: 8%;
+  position: relative;
+  left: 0;
+  top: 0;
+  right: 0;
+  min-height: 7vh;
+  align-items: center;
+  padding: 2px;
+}
+
+.logo {
+  object-position: center;
+  object-fit: fill;
+  width: 58px;
+  margin-left: 5px;
+  margin-right: auto;
+}
+
+nav > ul {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+nav > ul > li {
+  list-style: none;
+  flex: 1;
+  text-align: center;
+  margin-right: 10px;
+}
+
+.nav_element {
+  font-family: Lora, Roboto;
+  font-size: 1.5em;
+  color: rgb(19, 168, 168);
+  font-weight: 900;
+  text-decoration: none;
+  cursor: pointer;
+  transition: text-shadow 0.2s ease-in-out;
+}
+
+.nav_element:hover {
+  text-shadow: 1px 0px 2px rgb(12, 244, 244);
+}
+
+.nav_element:global(.active):hover {
+  text-shadow: none;
+  cursor: default;
+}
+
+.nav_element:global(.active) {
+  text-decoration: underline 3px;
+  text-decoration-style: dashed;
+  text-underline-position: under;
+  text-underline-offset: 3px;
+}
+
+@media only screen and (max-width: 600px) {
+  .logo {
+    width: 50px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  nav > ul {
+    row-gap: 1rem;
+    flex-direction: column;
+  }
+}

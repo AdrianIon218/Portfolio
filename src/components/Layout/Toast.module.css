@@ -1,0 +1,7 @@
+.dismissBtn {
+  border: none;
+  background-color: transparent;
+  color: currentColor;
+  font-weight: bold;
+  cursor: pointer;
+}

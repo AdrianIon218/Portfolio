@@ -1,0 +1,162 @@
+.personalContact {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.phoneNationality {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-left: 3px;
+  margin-right: 10px;
+}
+
+.mailMargin {
+  margin-left: 3px;
+  margin-right: 10px;
+}
+
+.divRowCentered {
+  display: flex;
+  align-items: center;
+  line-height: 1rem;
+}
+
+.icon {
+  transform: translateY(2px);
+  margin-right: 3px;
+}
+
+.contact_link,
+.contact_link:link {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 700;
+  display: inline-block;
+  transform: translateY(2px);
+  transition: text-shadow 0.4s;
+}
+
+.contact_link:hover {
+  text-shadow: 1px 0px 10px rgb(15, 153, 153);
+}
+
+.noBulletList {
+  list-style-type: none;
+  padding-left: 7px;
+}
+
+.submit-btn {
+  background-color: rgb(65, 212, 212);
+  border: 1px solid rgb(8, 122, 122) solid;
+  color: rgb(8, 122, 122);
+  font-weight: 800;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  margin-left: 5px;
+  padding: 0.3rem 0.7rem;
+  transition: all ease-in-out 0.4s;
+  cursor: pointer;
+  outline: none;
+}
+
+.submit-btn:hover,
+.submit-btn:focus,
+.submit-btn:disabled {
+  color: rgb(65, 212, 212);
+  background-color: rgb(8, 122, 122);
+}
+
+.submit-btn:active {
+  transform: translateY(8px);
+}
+
+.submit-btn:disabled {
+  cursor: default;
+  transform: none;
+  opacity: 0.7;
+}
+
+.noBulletList li {
+  margin-top: 10px;
+}
+
+.noBulletList li input {
+  margin-left: 7px;
+  border-radius: 5px;
+  border: 3px rgb(20, 140, 140) solid;
+  height: 20px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: rgb(19, 168, 168);
+  font-weight: 700;
+  width: 35%;
+  outline: none;
+  outline: none;
+  transition: all 0.3s;
+}
+
+.noBulletList li input:focus,
+.noBulletList li textarea:focus {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  border-color: rgb(14, 220, 243);
+}
+
+.noBulletList li textarea {
+  margin-left: 4px;
+  border-radius: 10px;
+  border: 3px rgb(20, 140, 140) solid;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: rgb(19, 168, 168);
+  font-weight: 700;
+  width: 60%;
+  padding: 5px;
+  resize: none;
+  outline: none;
+}
+
+.noBulletList li textarea::-webkit-scrollbar {
+  padding: 5px;
+  width: 12px;
+  border-radius: 10px;
+  background-color: #f5f5f5;
+}
+
+.noBulletList li textarea::-webkit-scrollbar-thumb {
+  cursor: grab;
+  border-radius: 10px;
+  background-color: rgb(19, 168, 168);
+}
+
+.noBulletList li input::-webkit-input-placeholder,
+.noBulletList li textarea::-webkit-input-placeholder {
+  color: rgb(169, 167, 167);
+}
+
+.noBulletList li input::-moz-placeholder,
+.noBulletList li textarea::-moz-placeholder {
+  color: rgb(169, 167, 167);
+}
+
+.noBulletList li input::-ms-placeholder,
+.noBulletList li textarea::-ms-placeholder {
+  color: rgb(169, 167, 167);
+}
+
+.noBulletList li input::placeholder,
+.noBulletList li input::placeholder {
+  color: rgb(169, 167, 167);
+}
+
+.redSpan {
+  color: rgb(216, 53, 53);
+  font-size: 16px;
+  font-weight: 800;
+}
+
+@media only screen and (max-width: 600px) {
+  .noBulletList li input {
+    width: 60%;
+  }
+}

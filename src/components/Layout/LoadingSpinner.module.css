@@ -1,0 +1,27 @@
+.spinner {
+  display: block;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 50%;
+}
+
+.spinner::after {
+  content: "";
+  display: inline-block;
+  border-radius: 50%;
+  border: 5px dashed rgb(8, 122, 122);
+  border-top-color: rgba(8, 122, 122, 0.3);
+  border-right-color: rgba(8, 122, 122, 0.5);
+  padding: 15px;
+  transform: translateX(-50%);
+  animation: spin 1.8s ease 0s infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: translateX(-50%) rotate(0deg);
+  }
+  to {
+    transform: translateX(-50%) rotate(360deg);
+  }
+}

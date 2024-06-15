@@ -5,6 +5,7 @@ import { LanguageType, SoftwareType } from "../CV/SkillSection";
 export type ProfileData = {
   name: string;
   photoProfile: string;
+  bluredPhotoProfile: string;
   address: string;
   birthdate: string;
   jobTitle: string;

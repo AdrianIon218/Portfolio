@@ -1,0 +1,46 @@
+.blurLoad {
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.blurLoad::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  animation: pulse 2s infinite;
+  border-radius: inherit;
+}
+
+.blurLoad.loaded::before {
+  content: none;
+}
+
+@keyframes pulse {
+  0% {
+    background-color: rgba(225, 255, 255, 0);
+  }
+  50% {
+    background-color: rgba(225, 255, 255, 0.2);
+  }
+  100% {
+    background-color: rgba(225, 255, 255, 0);
+  }
+}
+
+.blurLoad.loaded {
+  background-image: none !important;
+}
+
+.blurLoad.loaded > .imgProfile {
+  opacity: 1;
+}
+
+.imgProfile {
+  object-position: center;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 200ms ease-in-out;
+}

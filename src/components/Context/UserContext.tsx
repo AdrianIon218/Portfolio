@@ -75,6 +75,7 @@ export function UserContextProvider(props: React.PropsWithChildren) {
         currentContext.cvData = {
           name: profileData[0].name as string,
           photoProfile: profileData[0].photoProfile as string,
+          bluredPhotoProfile: profileData[0].bluredPhotoProfile as string,
           address: profileData[0].address as string,
           birthdate: profileData[0].birthdate as string,
           jobTitle: profileData[0].jobTitle as string,

@@ -1,5 +1,7 @@
+import { useState } from "react";
 import classes from "./CV.module.css";
 import Nationality from "./Nationality";
+import BluredLoadImage from "../Layout/BluredLoadImage";
 
 type ProfileProps = {
   birthdate: string;
@@ -9,6 +11,7 @@ type ProfileProps = {
   address: string;
   jobTitle: string;
   cvLink: string;
+  bluredPhotoProfile: string;
 };
 
 function calculateAge(birthdate: string) {
@@ -25,9 +28,13 @@ export default function Profile(props: ProfileProps) {
   return (
     <section>
       <h2 className={classes.title}>{props.name}</h2>
-      <p className={classes.center}>
-        <img className={classes.myPhoto} alt="" src={props.photoProfile} />
-      </p>
+      <div className={classes.center}>
+        <BluredLoadImage
+          image={props.photoProfile}
+          bluredImg={props.bluredPhotoProfile}
+          ctnClasses={classes.myPhoto}
+        />
+      </div>
       <div className={`${classes.center} ${classes.divColumn}`}>
         <i className="fas fa-map-marker-alt">&nbsp;{props.address}</i>
         <i className="fas fa-male">&nbsp;{`${age} years old`}</i>

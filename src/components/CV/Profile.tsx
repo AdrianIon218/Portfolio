@@ -1,4 +1,3 @@
-import { useState } from "react";
 import classes from "./CV.module.css";
 import Nationality from "./Nationality";
 import BluredLoadImage from "../Layout/BluredLoadImage";

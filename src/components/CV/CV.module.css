@@ -43,7 +43,7 @@
 .divColumn {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 0.5rem;
   letter-spacing: 1px;
   font-weight: 700;
 }
@@ -79,6 +79,10 @@
   text-align: center;
   transition: all 0.5s;
   user-select: none;
+}
+
+.linkEducation {
+  transform: translate(20%, -30%);
 }
 
 .linkInfo:hover {

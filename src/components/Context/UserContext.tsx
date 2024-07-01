@@ -117,7 +117,7 @@ export function UserContextProvider(props: React.PropsWithChildren) {
         currentContext.educationArr = educationData.map(
           (item) =>
             ({
-              universityName: item.university,
+              institute: item.institute,
               facultyName: item.faculty,
               degree: item.degree,
               fieldOfStudy: item.field,

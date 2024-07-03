@@ -2,6 +2,7 @@ import { useMemo, useState } from "react";
 import classes from "./NavComp.module.css";
 import { NavLink } from "react-router-dom";
 import toast from "react-hot-toast";
+import LanguageBtn from "./LanguageBtn";
 
 export enum NavTabs {
   CV = "CV",
@@ -41,6 +42,7 @@ export default function NavComp() {
         alt="LOGO"
       />
       <ul>{MenuElements}</ul>
+      <LanguageBtn />
     </nav>
   );
 }

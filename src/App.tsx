@@ -1,7 +1,8 @@
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
-import { Suspense, lazy } from "react";
+import { Suspense, lazy, useEffect, useSyncExternalStore } from "react";
 import Layout from "./components/Layout/Layout";
 import LoadingSpinner from "./components/Layout/LoadingSpinner";
+import { useTranslation } from "react-i18next";
 
 const CV = lazy(() => import("./components/CV/CV"));
 const ContactPage = lazy(() => import("./components/Contact/ContactPage"));
@@ -9,6 +10,20 @@ const Projects = lazy(() => import("./components/Projects/ProjectsPage"));
 const NoPage = lazy(() => import("./components/NoPage/NoPage"));
 
 function App() {
+  const { i18n } = useTranslation();
+  const activeLanguage =
+    useSyncExternalStore(
+      (listener: () => void) => {
+        window.addEventListener("storage", listener);
+        return () => window.removeEventListener("storage", listener);
+      },
+      () => localStorage.getItem("@activeLanguage")
+    ) || i18n.language;
+
+  useEffect(() => {
+    i18n.changeLanguage(activeLanguage);
+  }, [activeLanguage]);
+
   return (
     <BrowserRouter>
       <Layout>

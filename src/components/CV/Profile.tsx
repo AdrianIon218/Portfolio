@@ -1,6 +1,7 @@
 import classes from "./CV.module.css";
 import Nationality from "./Nationality";
 import BluredLoadImage from "../Layout/BluredLoadImage";
+import { useTranslation } from "react-i18next";
 
 type ProfileProps = {
   birthdate: string;
@@ -20,6 +21,7 @@ function calculateAge(birthdate: string) {
 }
 
 export default function Profile(props: ProfileProps) {
+  const { t } = useTranslation();
   const { birthdate } = props;
 
   const age = calculateAge(birthdate);
@@ -36,12 +38,12 @@ export default function Profile(props: ProfileProps) {
       </div>
       <div className={`${classes.center} ${classes.divColumn}`}>
         <i className="fas fa-map-marker-alt">&nbsp;{props.address}</i>
-        <i className="fas fa-male">&nbsp;{`${age} years old`}</i>
+        <i className="fas fa-male">&nbsp;{t("profile.age", { age })}</i>
         <i className="fas fa-suitcase">&nbsp;{props.jobTitle}</i>
         <Nationality isEuropean={props.isEuropean} />
-        <p className={classes.pCvCtn}>
+        <p className={classes.ctnCenter}>
           <a href={props.cvLink} target="_blank" className={classes.linkInfo}>
-            View CV <i className="fas fa-eye" />
+            {t("profile.viewCV")} <i className="fas fa-eye" />
           </a>
         </p>
       </div>

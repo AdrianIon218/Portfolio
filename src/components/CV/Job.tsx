@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import classes from "./CV.module.css";
 import useDateFormated from "./useDateFormated";
 
@@ -11,6 +12,7 @@ export type JobProps = {
 };
 
 export default function Job(props: JobProps) {
+  const { t } = useTranslation();
   const startDateFormated = useDateFormated(props.startDate);
   const endDateFormated = useDateFormated(props.endDate);
 
@@ -21,11 +23,17 @@ export default function Job(props: JobProps) {
         {props.position}
       </h3>
       <ul>
-        <li>Company : {props.companyName}</li>
-        <li>Period : {`${startDateFormated} - ${endDateFormated}`}</li>
-        <li>Location : {props.location}</li>
         <li>
-          Description :{" "}
+          {t("work.company")} {props.companyName}
+        </li>
+        <li>
+          {t("work.period")} {`${startDateFormated} - ${endDateFormated}`}
+        </li>
+        <li>
+          {t("work.location")} {props.location}
+        </li>
+        <li>
+          {t("work.description")}
           <span className={classes.description}>- {props.description}</span>
         </li>
       </ul>

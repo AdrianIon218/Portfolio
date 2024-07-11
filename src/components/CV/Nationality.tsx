@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import classes from "./CV.module.css";
 
 type NationalityProps = {
@@ -5,9 +6,11 @@ type NationalityProps = {
 };
 
 export default function Nationality(props: NationalityProps) {
+  const { t } = useTranslation();
+
   const europeanFlag = props.isEuropean ? (
     <img
-      title="EU citizen"
+      title={t("profile.euCitizen")}
       src="https://nxssaifxsplrahljuqkr.supabase.co/storage/v1/object/public/images/europeanFlag.png"
       className={classes.flag}
       alt="European"
@@ -16,7 +19,7 @@ export default function Nationality(props: NationalityProps) {
 
   const nationalityFlag = (
     <img
-      title="Romanian"
+      title={t("profile.nationality")}
       src={
         "https://nxssaifxsplrahljuqkr.supabase.co/storage/v1/object/public/images/romanianFlag.png"
       }
@@ -26,7 +29,7 @@ export default function Nationality(props: NationalityProps) {
   );
 
   return !europeanFlag && !nationalityFlag ? null : (
-    <p>
+    <p className={classes.notionalityCtn}>
       {" "}
       {nationalityFlag} {europeanFlag}{" "}
     </p>

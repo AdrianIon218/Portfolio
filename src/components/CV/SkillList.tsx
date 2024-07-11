@@ -1,8 +1,11 @@
 import { useMemo } from "react";
 import classes from "./CV.module.css";
 import { SkillListProps } from "./SkillSection";
+import { useTranslation } from "react-i18next";
 
 export default function Skill(props: SkillListProps) {
+  const { t } = useTranslation();
+
   const softwareSkillElements = useMemo(() => {
     return props.softwareSkills.map((item) => (
       <li key={item.name}>{item.name}</li>
@@ -15,7 +18,7 @@ export default function Skill(props: SkillListProps) {
         {item.name}: {item.level}
       </li>
     ));
-  }, []);
+  }, [props.languageSkills]);
 
   return (
     <>
@@ -29,7 +32,7 @@ export default function Skill(props: SkillListProps) {
       <div>
         <h3>
           <i className="fas fa-apple-alt" />
-          &nbsp;Languages:
+          &nbsp;{t("skills.languages")}
         </h3>
         <ul className={classes.listSquare}>{languageSillElements}</ul>
       </div>

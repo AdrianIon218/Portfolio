@@ -4,8 +4,11 @@ import Email from "./Email";
 import LinkContact from "./LinkContact";
 import React, { useMemo } from "react";
 import { ContactType } from "../Context/UserContextTypes";
+import { useTranslation } from "react-i18next";
 
 export default function PersonalContacts(props: { contacts: ContactType[] }) {
+  const { t } = useTranslation();
+
   const contactsElements = useMemo(
     () =>
       props.contacts.map((contact, index) => {
@@ -39,7 +42,7 @@ export default function PersonalContacts(props: { contacts: ContactType[] }) {
 
   return (
     <React.Fragment>
-      <h2>Contacts</h2>
+      <h2>{t("contacts.title")}</h2>
       <div className={classes.personalContact}>{contactsElements}</div>
     </React.Fragment>
   );

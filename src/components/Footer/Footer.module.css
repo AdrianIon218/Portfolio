@@ -3,7 +3,7 @@ footer {
   font-size: larger;
   font-weight: bold;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  background-color: rgb(75, 74, 73);
+  background-color: var(--color-gray-1);
   position: relative;
   min-height: 10vh;
   height: auto;

@@ -63,5 +63,7 @@
     { "name": "Oct." },
     { "name": "Noi." },
     { "name": "Dec." }
-  ]
+  ],
+  "noPageMessage": "Ne pare rău, pagina accesată nu există",
+  "viewRepo": "Vizualizați depozitul"
 }

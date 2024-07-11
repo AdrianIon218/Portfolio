@@ -63,5 +63,7 @@
     { "name": "Oct." },
     { "name": "Nov." },
     { "name": "Dec." }
-  ]
+  ],
+  "noPageMessage": "Sorry, the page you accessed does not exist",
+  "viewRepo": "View the repo"
 }

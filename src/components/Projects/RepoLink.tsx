@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import classes from "./Projects.module.css";
 
 const GithubURL =
@@ -11,6 +12,7 @@ type RepoLinkProps = {
 };
 
 function RepoLink(props: RepoLinkProps) {
+  const { t } = useTranslation();
   const svgStyle = {
     "--svg-url": `url("${props.type === "github" ? GithubURL : BitbucketURL}")`,
   } as React.CSSProperties;
@@ -19,7 +21,7 @@ function RepoLink(props: RepoLinkProps) {
     <div className={classes.repoLink}>
       <div className={classes.icon_link} style={svgStyle} />
       <a href={props.link} target="_blank" rel="noreferrer">
-        View the repo
+        {t("viewRepo")}
       </a>
     </div>
   );

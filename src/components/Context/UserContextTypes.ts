@@ -42,6 +42,8 @@ export type ContactType = EmailContact | PhoneContact | LinkContact;
 
 export type CategoryIcon = { name: string; photo: string };
 
+export type LangProp = { lang: string };
+
 type ContentParagraph = {
   type: "p";
   text: string;

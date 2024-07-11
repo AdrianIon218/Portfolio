@@ -2,6 +2,7 @@ import { useId, useMemo, useRef } from "react";
 import classes from "./Projects.module.css";
 import RepoLink from "./RepoLink";
 import { ContentType } from "../Context/UserContextTypes";
+import { useTranslation } from "react-i18next";
 
 type ProjectPanelProps = {
   onClosePanel: () => void;
@@ -12,6 +13,7 @@ type ProjectPanelProps = {
 };
 
 function ProjectPanel(props: ProjectPanelProps) {
+  const { t } = useTranslation();
   const isNotThePortfolioPage = props.title !== "Portfolio";
   const panelRef = useRef<HTMLDivElement>(null);
   const key = useId();
@@ -36,7 +38,7 @@ function ProjectPanel(props: ProjectPanelProps) {
               className={classes.dependenciesCtn}
               key={`${key}-dependencies-${index}`}
             >
-              <h4>Other dependencies:</h4>
+              <h4>{t("project.dependencies")}</h4>
               <ul>
                 {item.dependencies.map((dependency) => (
                   <li key={`${key}-${dependency}`}>{dependency}</li>
@@ -48,7 +50,7 @@ function ProjectPanel(props: ProjectPanelProps) {
           return (
             <div className={classes.qrCodeCtn} key={item.image}>
               <img
-                title="QR code"
+                title={t("project.qrCode")}
                 src={item.image}
                 className={classes.qrCodeImg}
                 alt="QR code"
@@ -69,8 +71,7 @@ function ProjectPanel(props: ProjectPanelProps) {
       <div className={classes.contentContainer} ref={panelRef}>
         {!isNotThePortfolioPage && (
           <div className={classes.current_page_indicator}>
-            {" "}
-            The current page
+            {t("project.currentPage")}
           </div>
         )}
         <div

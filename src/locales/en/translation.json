@@ -1,7 +1,67 @@
 {
   "title": "English",
-  "description": {
-    "part1": "To get started, edit <1>src/App.js</1> and save to reload.",
-    "part2": "Switch language between english and german using buttons above."
-  }
+  "langFlag": "englishFlag.jpg",
+  "example": "e.g: {{example}}",
+  "moreInfo": "More info",
+  "nav": {
+    "CV": "CV",
+    "Projects": "Projects",
+    "Contact": "Contact"
+  },
+  "profile": {
+    "euCitizen": "EU citizen",
+    "nationality": "Romanian",
+    "viewCV": "View CV",
+    "age": "{{age}} years old"
+  },
+  "education": {
+    "title": "Education",
+    "degree": "Degree:",
+    "fieldOfStudy": "Field of Study:",
+    "period": "Period:",
+    "moreInfoTooltip": "More info about the study program"
+  },
+  "contacts": {
+    "title": "Contacts",
+    "send": "Send",
+    "name": "Name",
+    "email": "Email address",
+    "contactsTitle": "Write a message ?",
+    "messageSent": "Message sent!",
+    "errorMessage": "An error has occurred, please try again later!",
+    "messagePlaceholder": "Message ...",
+    "namePlaceholder": "Andrew",
+    "emailPlaceholder": "name@yahoo.com"
+  },
+  "skills": {
+    "title": "Skills",
+    "languages": "Languages:"
+  },
+  "work": {
+    "title": "Work experience",
+    "company": "Company:",
+    "period": "Period:",
+    "location": "Location:",
+    "description": "Description:"
+  },
+  "project": {
+    "dependencies": "Other dependencies:",
+    "currentPage": "The current page",
+    "qrCode": "QR code"
+  },
+  "present": "present",
+  "monthNames": [
+    { "name": "Jan." },
+    { "name": "Feb." },
+    { "name": "Mar." },
+    { "name": "Apr." },
+    { "name": "May" },
+    { "name": "Jun." },
+    { "name": "Jul." },
+    { "name": "Aug." },
+    { "name": "Sep." },
+    { "name": "Oct." },
+    { "name": "Nov." },
+    { "name": "Dec." }
+  ]
 }

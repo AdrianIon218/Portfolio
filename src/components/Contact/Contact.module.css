@@ -64,8 +64,8 @@
 .submit-btn:hover,
 .submit-btn:focus,
 .submit-btn:disabled {
-  color: rgb(65, 212, 212);
-  background-color: rgb(8, 122, 122);
+  color: var(--color-cyan-1);
+  background-color: var(--color-blue-4);
 }
 
 .submit-btn:active {

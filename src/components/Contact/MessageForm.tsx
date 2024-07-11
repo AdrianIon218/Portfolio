@@ -3,6 +3,7 @@ import classes from "./Contact.module.css";
 import toast, { useToasterStore } from "react-hot-toast";
 import { supabase } from "../../supabse";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 export default function MessageForm() {
   const { register, handleSubmit, reset } = useForm();
@@ -10,6 +11,7 @@ export default function MessageForm() {
   const { toasts } = useToasterStore();
   const isToastAlreadyshown = toasts.filter((t) => t.visible).length > 0;
   const disableForm = isMessageSending || isToastAlreadyshown;
+  const { t } = useTranslation();
 
   async function onSubmit(formData: FieldValues) {
     const { name, email, message } = formData;
@@ -22,27 +24,29 @@ export default function MessageForm() {
       .select();
 
     if (!error) {
-      toast.success("Message sent!");
+      toast.success(t("contacts.messageSent"));
       reset();
     } else {
-      toast.error("An error has occurred, please try again later!");
+      toast.error(t("contacts.errorMessage"));
     }
     setIsMessageSending(false);
   }
 
   return (
     <section>
-      <h2>Write a message ?</h2>
+      <h2>{t("contacts.contactsTitle") as string}</h2>
       <form onSubmit={handleSubmit(onSubmit)}>
         <ul className={classes.noBulletList}>
           <li>
             <label htmlFor="name">
-              Name <span className={classes.redSpan}>*</span>{" "}
+              {t("contacts.name")} <span className={classes.redSpan}>*</span>{" "}
             </label>
             <input
               id="name"
               type="text"
-              placeholder="ex: Andrew"
+              placeholder={t("example", {
+                example: t("contacts.namePlaceholder"),
+              })}
               required
               disabled={disableForm}
               {...register("name")}
@@ -50,12 +54,14 @@ export default function MessageForm() {
           </li>
           <li>
             <label htmlFor="email">
-              Email <span className={classes.redSpan}>*</span>{" "}
+              {t("contacts.email")} <span className={classes.redSpan}>*</span>{" "}
             </label>
             <input
               id="email"
               type="email"
-              placeholder="ex: name@yahoo.com"
+              placeholder={t("example", {
+                example: t("contacts.emailPlaceholder"),
+              })}
               required
               disabled={disableForm}
               {...register("email")}
@@ -64,7 +70,7 @@ export default function MessageForm() {
           <li>
             <textarea
               rows={10}
-              placeholder="Message ..."
+              placeholder={t("contacts.messagePlaceholder")}
               required
               disabled={disableForm}
               {...register("message")}
@@ -72,7 +78,7 @@ export default function MessageForm() {
           </li>
           <li>
             <button className={classes["submit-btn"]} disabled={disableForm}>
-              Send
+              {t("contacts.send")}
             </button>
           </li>
         </ul>

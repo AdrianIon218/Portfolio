@@ -1,0 +1,71 @@
+.btnLangCtn {
+  display: flex;
+  justify-content: center;
+}
+
+.btnLang {
+  display: inline-block;
+  border-radius: 50%;
+  width: 2.2rem;
+  height: 2.1rem;
+  border: 2px solid var(--color-blue-4);
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.dropdownContent {
+  display: none;
+  position: absolute;
+  top: 110%;
+  right: 10%;
+  background-color: var(--color-gray-light-2);
+  min-width: 5rem;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border: 3px solid var(--color-blue-4);
+  border-radius: 0.5rem;
+}
+
+.dropdownContent.menuOpen {
+  display: block;
+}
+
+.dropdownContent button {
+  color: var(--color-cyan-2);
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border: none;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+}
+
+.dropdownContent button.activeLang {
+  background-color: var(--color-blue-4);
+  color: var(--color-cyan-1);
+}
+
+.dropdownContent button:hover {
+  color: #f1f1f1;
+  color: var(--color-gray-1);
+  background-color: var(--color-blue-1);
+  border-radius: 0.2rem;
+}
+
+.flagImg {
+  border-radius: 50%;
+  width: 1.7rem;
+  height: 1.5rem;
+
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+}

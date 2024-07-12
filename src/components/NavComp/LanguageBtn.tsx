@@ -9,9 +9,9 @@ type LanguageTranslations = {
 function getFlagByLang(lang: string) {
   switch (lang) {
     case "en":
-      return "assets/englishFlag.jpg";
+      return "/assets/englishFlag.jpg";
     case "ro":
-      return "assets/romanianFlag.png";
+      return "/assets/romanianFlag.png";
     default:
       return "";
   }
@@ -64,7 +64,7 @@ function LanguageBtn() {
     <div className={classes.btnLangCtn}>
       <div
         className={classes.btnLang}
-        style={{ backgroundImage: `url(assets/${t("langFlag")})` }}
+        style={{ backgroundImage: `url(/assets/${t("langFlag")})` }}
         onClick={toggleMenu}
         onBlur={() => {
           setTimeout(() => setMenuOpen(false), 250);

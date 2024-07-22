@@ -48,8 +48,7 @@ function LanguageBtn() {
   );
 
   function setLanguage(ev: React.MouseEvent<HTMLElement>, lang: string) {
-    ev.preventDefault();
-    setMenuOpen(false);
+    ev.stopPropagation();
     if (i18n.language !== lang) {
       localStorage.setItem("@activeLanguage", lang);
       i18n.changeLanguage(lang);
@@ -67,7 +66,7 @@ function LanguageBtn() {
         style={{ backgroundImage: `url(/assets/${t("langFlag")})` }}
         onClick={toggleMenu}
         onBlur={() => {
-          setTimeout(() => setMenuOpen(false), 250);
+          setTimeout(() => setMenuOpen(false), 100);
         }}
         tabIndex={0}
       >

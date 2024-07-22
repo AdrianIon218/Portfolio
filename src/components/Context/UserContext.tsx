@@ -205,8 +205,6 @@ export function UserContextProvider(props: React.PropsWithChildren) {
     if (dataContainer) updateCtxByLang(i18n.language);
   }, [dataContainer, i18n.language]);
 
-  console.log(userData);
-
   return (
     <UserContext.Provider value={userData}>
       {props.children}

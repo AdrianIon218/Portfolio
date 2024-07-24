@@ -419,6 +419,14 @@ body:has(.backdrop) nav {
   margin-bottom: 2rem;
 }
 
-.qrCodeImg {
+.qrCodeImg,
+.loadingQRCtn {
   height: 15rem;
+}
+
+.loadingQRCtn {
+  padding-left: 0;
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
 }

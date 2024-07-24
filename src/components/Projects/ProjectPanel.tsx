@@ -3,6 +3,7 @@ import classes from "./Projects.module.css";
 import RepoLink from "./RepoLink";
 import { ContentType } from "../Context/UserContextTypes";
 import { useTranslation } from "react-i18next";
+import QRCodeImg from "./QRCodeImg";
 
 type ProjectPanelProps = {
   onClosePanel: () => void;
@@ -48,14 +49,11 @@ function ProjectPanel(props: ProjectPanelProps) {
           );
         case "qr_code":
           return (
-            <div className={classes.qrCodeCtn} key={item.image}>
-              <img
-                title={t("project.qrCode")}
-                src={item.image}
-                className={classes.qrCodeImg}
-                alt="QR code"
-              />
-            </div>
+            <QRCodeImg
+              src={item.image}
+              title={t("project.qrCode")}
+              key={item.image}
+            />
           );
         case "bitbucket":
         case "github":

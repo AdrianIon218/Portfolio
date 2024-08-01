@@ -1,11 +1,12 @@
 import Card from "./Card";
 import classes from "./Projects.module.css";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { UserContext } from "../Context/UserContext";
 import LoadingSpinner from "../Layout/LoadingSpinner";
 
 export default function ProjectsPage() {
   const { projectsArr } = useContext(UserContext);
+  const [isFirstCardLoaded, setIsCardLoaded] = useState(false);
 
   if (!projectsArr) {
     return <LoadingSpinner />;
@@ -22,11 +23,22 @@ export default function ProjectsPage() {
         title={project.title}
         content={project.content}
         linkBtnLabel={project.linkBtnLabel}
+        onLoad={() => {
+          index === 0 && setIsCardLoaded(true);
+        }}
       />
     );
   });
 
   return (
-    <section className={classes.cardsContainer}>{projectsElements}</section>
+    <>
+      {!isFirstCardLoaded && <LoadingSpinner />}
+      <section
+        className={classes.cardsContainer}
+        style={isFirstCardLoaded ? {} : { display: "none" }}
+      >
+        {projectsElements}
+      </section>
+    </>
   );
 }

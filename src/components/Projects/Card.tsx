@@ -11,6 +11,7 @@ type CardProps = {
   description: string;
   title: string;
   content: ContentType[];
+  onLoad: () => void;
 };
 
 export default function Card(props: CardProps) {
@@ -58,7 +59,7 @@ export default function Card(props: CardProps) {
       <div className={classes.CardElement} onClick={onCardClick}>
         <div className={classes.row_container}>{categories}</div>
         <div className={classes.card}>
-          <img src={props.photoLink} alt={props.title} />
+          <img src={props.photoLink} alt={props.title} onLoad={props.onLoad} />
           <label>{props.title}</label>
         </div>
         <span

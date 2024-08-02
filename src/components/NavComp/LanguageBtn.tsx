@@ -66,7 +66,7 @@ function LanguageBtn() {
         style={{ backgroundImage: `url(/assets/${t("langFlag")})` }}
         onClick={toggleMenu}
         onBlur={() => {
-          setTimeout(() => setMenuOpen(false), 100);
+          setTimeout(() => setMenuOpen(false), 200);
         }}
         tabIndex={0}
       >

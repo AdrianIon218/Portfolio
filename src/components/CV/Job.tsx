@@ -3,6 +3,7 @@ import classes from "./CV.module.css";
 import useDateFormated from "./useDateFormated";
 
 export type JobProps = {
+  id: number;
   position: string;
   startDate: string;
   endDate: string;

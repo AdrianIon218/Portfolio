@@ -10,24 +10,26 @@ export default function Footer() {
   const isContactPage = useLocation().pathname.slice(1) === NavTabs.CONTACT;
 
   return (
-    <footer className={classes.footer}>
-      <div>
-        <p>{footerData.name}</p>
-      </div>
-      <div className={classes.socialMedia}>
-        {footerData.linkedinLink && (
+    <footer className={classes.footerCtn}>
+      <div className={classes.footer}>
+        <div>
+          <p>{footerData.name}</p>
+        </div>
+        <div className={classes.socialMedia}>
+          {footerData.linkedinLink && (
+            <ButtonIcon
+              img="https://nxssaifxsplrahljuqkr.supabase.co/storage/v1/object/public/images/linkedin.png"
+              alt="Linkedin"
+              linkExternalPage={footerData.linkedinLink}
+            />
+          )}
           <ButtonIcon
-            img="https://nxssaifxsplrahljuqkr.supabase.co/storage/v1/object/public/images/linkedin.png"
-            alt="Linkedin"
-            linkExternalPage={footerData.linkedinLink}
+            img="https://nxssaifxsplrahljuqkr.supabase.co/storage/v1/object/public/images/contact-icon.png"
+            alt="Contact"
+            linkInternalPage="Contact"
+            disable={isContactPage}
           />
-        )}
-        <ButtonIcon
-          img="https://nxssaifxsplrahljuqkr.supabase.co/storage/v1/object/public/images/contact-icon.png"
-          alt="Contact"
-          linkInternalPage="Contact"
-          disable={isContactPage}
-        />
+        </div>
       </div>
     </footer>
   );

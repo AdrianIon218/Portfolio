@@ -1,15 +1,25 @@
-footer {
+.footerCtn {
+  background-color: var(--color-blue-1);
+  border: none;
   color: rgb(15, 137, 137);
   font-size: larger;
   font-weight: bold;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  background-color: var(--color-gray-1);
   position: relative;
   min-height: 10vh;
-  height: auto;
   bottom: 0;
   left: 0;
   right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  border: none;
+  backface-visibility: hidden;
+}
+
+.footer {
+  flex: 1;
+  background-color: var(--color-gray-1);
   border-top: 6px rgb(15, 137, 137) solid;
   border-top-left-radius: 8%;
   border-top-right-radius: 8%;

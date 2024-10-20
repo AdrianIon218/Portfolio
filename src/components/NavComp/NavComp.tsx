@@ -37,15 +37,17 @@ export default function NavComp() {
   );
 
   return (
-    <nav className={classes.nav}>
-      <img
-        className={classes.logo}
-        src="https://nxssaifxsplrahljuqkr.supabase.co/storage/v1/object/public/images/MyLogo.png"
-        alt="LOGO"
-      />
-      <ul>
-        {MenuElements} <LanguageBtn />
-      </ul>
-    </nav>
+    <div className={classes.navCtn}>
+      <nav className={classes.nav}>
+        <img
+          className={classes.logo}
+          src="https://nxssaifxsplrahljuqkr.supabase.co/storage/v1/object/public/images/MyLogo.png"
+          alt="LOGO"
+        />
+        <ul>
+          {MenuElements} <LanguageBtn />
+        </ul>
+      </nav>
+    </div>
   );
 }

@@ -1,3 +1,9 @@
+.navCtn {
+  display: block;
+  background-color: var(--color-blue-1);
+  border: none;
+}
+
 nav {
   display: flex;
   flex-wrap: nowrap;

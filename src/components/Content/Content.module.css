@@ -1,6 +1,7 @@
 .main {
   display: grid;
   grid-template-columns: 100px 1fr 100px;
+  background-color: var(--color-blue-1);
 }
 
 .content {

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useSyncExternalStore } from "react";
 import classes from "./BluredLoadImage.module.css";
 
 interface IBluredLoadImageProps {
@@ -7,12 +7,36 @@ interface IBluredLoadImageProps {
   ctnClasses?: string;
 }
 
+const subscribe = (listener: () => void) => {
+  window.addEventListener("storage", listener);
+  return () => window.removeEventListener("storage", listener);
+};
+
+const getSnapshot = () => {
+  return sessionStorage.getItem("@loadedImages");
+};
+
 function BluredLoadImage(props: IBluredLoadImageProps) {
+  const sessionImages = JSON.parse(
+    useSyncExternalStore(subscribe, getSnapshot) ?? "[]"
+  ) as string[];
+  const isImageAlreadyLoadedInSession = sessionImages.includes(props.image);
   const [isImageLoaded, setImageLoaded] = useState(false);
+
+  const onLoadHandler = () => {
+    setImageLoaded(true);
+    if (!isImageAlreadyLoadedInSession) {
+      sessionStorage.setItem(
+        "@loadedImages",
+        JSON.stringify([...sessionImages, props.image])
+      );
+    }
+  };
+
   return (
     <div
       className={`${props.ctnClasses}  ${classes.blurLoad} ${
-        isImageLoaded && classes.loaded
+        (isImageAlreadyLoadedInSession || isImageLoaded) && classes.loaded
       }`}
       style={{
         backgroundImage: `url(${props.bluredImg})`,
@@ -22,7 +46,7 @@ function BluredLoadImage(props: IBluredLoadImageProps) {
         className={classes.imgProfile}
         alt={props.image}
         src={props.image}
-        onLoad={() => setImageLoaded(true)}
+        onLoad={onLoadHandler}
       />
     </div>
   );

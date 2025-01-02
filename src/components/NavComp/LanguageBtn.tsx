@@ -12,6 +12,8 @@ function getFlagByLang(lang: string) {
       return "/assets/englishFlag.jpg";
     case "ro":
       return "/assets/romanianFlag.png";
+    case "fr":
+      return "/assets/frenchFlag.png";
     default:
       return "";
   }

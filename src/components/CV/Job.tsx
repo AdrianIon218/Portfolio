@@ -10,6 +10,7 @@ export type JobProps = {
   companyName: string;
   location: string;
   description: string;
+  order: number;
 };
 
 export default function Job(props: JobProps) {

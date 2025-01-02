@@ -1,0 +1,69 @@
+{
+  "title": "Français",
+  "langFlag": "frenchFlag.png",
+  "example": "ex: {{example}}",
+  "moreInfo": "Plus d'info",
+  "nav": {
+    "CV": "CV",
+    "Projects": "Projets",
+    "Contact": "Contact"
+  },
+  "profile": {
+    "euCitizen": "Citoyen de l'UE",
+    "nationality": "Roumaine",
+    "viewCV": "Voir le CV",
+    "age": "{{age}} ans"
+  },
+  "education": {
+    "title": "L'éducation",
+    "degree": "Diplôme:",
+    "fieldOfStudy": "Le domaine d'études:",
+    "period": "La période:",
+    "moreInfoTooltip": "Plus d'informations sur le programme d'études"
+  },
+  "contacts": {
+    "title": "Contacts",
+    "send": "Envoyer",
+    "name": "Nom",
+    "email": "Adresse email",
+    "contactsTitle": "Écrire un message",
+    "messageSent": "Message envoyé!",
+    "errorMessage": "Une erreur s'est produite, veuillez réessayer plus tard!",
+    "messagePlaceholder": "Message ...",
+    "namePlaceholder": "Alex",
+    "emailPlaceholder": "nom@yahoo.com"
+  },
+  "skills": {
+    "title": "Les compétences",
+    "languages": "Langues:"
+  },
+  "work": {
+    "title": "L'expérience professionnelle",
+    "company": "Entreprise:",
+    "period": "Période:",
+    "location": "Lieu:",
+    "description": "Description:"
+  },
+  "project": {
+    "dependencies": "Autres dépendances:",
+    "currentPage": "La page actuelle",
+    "qrCode": "Code QR"
+  },
+  "present": "présent",
+  "monthNames": [
+    { "name": "Jan." },
+    { "name": "Fév." },
+    { "name": "Mars" },
+    { "name": "Avr." },
+    { "name": "Mai" },
+    { "name": "Juin" },
+    { "name": "Juil." },
+    { "name": "Août." },
+    { "name": "Sept." },
+    { "name": "Oct." },
+    { "name": "Nov." },
+    { "name": "Déc." }
+  ],
+  "noPageMessage": "Désolé, la page à laquelle vous avez accédé n'existe pas",
+  "viewRepo": "Voir le repo"
+}

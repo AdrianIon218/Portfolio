@@ -142,7 +142,7 @@ export function UserContextProvider(props: React.PropsWithChildren) {
         );
 
         const jobsArr = jobsData as (JobType & LangProp)[];
-        jobsArr.sort((job1, job2) => job2.id - job1.id);
+        jobsArr.sort((job1, job2) => job1.order - job2.order);
 
         const allLanguageSkills = languageSkills as (LanguageType & LangProp)[];
 

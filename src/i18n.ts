@@ -2,6 +2,7 @@ import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 import translationsENG from "./locales/en/translation.json";
 import translationsRO from "./locales/ro/translation.json";
+import translationsFR from "./locales/fr/translation.json";
 
 //https://hackernoon.com/how-to-create-multilingual-react-apps-with-react-i18next
 i18n
@@ -13,6 +14,7 @@ i18n
     fallbackLng: "en",
     resources: {
       en: { translation: translationsENG },
+      fr: { translation: translationsFR },
       ro: { translation: translationsRO },
     },
     interpolation: {

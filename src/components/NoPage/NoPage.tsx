@@ -10,7 +10,7 @@ function NoPage() {
         <p className={classes.emoji}>&#128533;</p>
         <h1>
           {t("noPageMessage")}
-          <span className={classes.red}>!</span>
+          <span className={classes.red}> !</span>
         </h1>
       </div>
     </section>

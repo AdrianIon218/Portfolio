@@ -259,12 +259,6 @@ body:has(.backdrop) nav {
   width: 0.6rem;
 }
 
-/* Track */
-.projectPresentation::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px grey;
-  border-radius: 1rem;
-}
-
 /* Handle */
 .projectPresentation::-webkit-scrollbar-thumb {
   background: rgb(12, 108, 108);

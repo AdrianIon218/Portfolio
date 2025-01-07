@@ -176,7 +176,9 @@ export function UserContextProvider(props: React.PropsWithChildren) {
       currentContext.cvData = selectedProfileData as ProfileData;
 
       currentContext.footerData = {
-        name: selectedProfileData!.name as string,
+        name:
+          dataContainer?.profiles.find((item) => item.lang === "ro")?.name ||
+          (selectedProfileData!.name as string),
         linkedinLink: selectedProfileData!.linkedinLink as string,
       };
 

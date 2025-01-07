@@ -12,8 +12,11 @@ export default function Footer() {
   return (
     <footer className={classes.footerCtn}>
       <div className={classes.footer}>
-        <div>
-          <p>{footerData.name}</p>
+        <div className={classes.copyright}>
+          <p>
+            &copy;
+            {footerData.name}
+          </p>
         </div>
         <div className={classes.socialMedia}>
           {footerData.linkedinLink && (

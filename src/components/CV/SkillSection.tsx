@@ -10,6 +10,7 @@ export type SkillListProps = {
 export type SoftwareType = {
   id: number;
   name: string;
+  orderNum: number;
 };
 
 export type LanguageType = {

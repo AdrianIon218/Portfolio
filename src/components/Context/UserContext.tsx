@@ -51,27 +51,27 @@ export function UserContextProvider(props: React.PropsWithChildren) {
         .from("Profile")
         .select("*");
 
-      let { data: contacts, error: contactsError } = await supabase
+      const { data: contacts, error: contactsError } = await supabase
         .from("Contact")
         .select("*");
 
-      let { data: educationData, error: educationError } = await supabase
+      const { data: educationData, error: educationError } = await supabase
         .from("Education")
         .select("*");
 
-      let { data: jobsData, error: jobsError } = await supabase
+      const { data: jobsData, error: jobsError } = await supabase
         .from("Job")
         .select("*");
 
-      let { data: softwareSkills, error: softwareError } = await supabase
+      const { data: softwareSkills, error: softwareError } = await supabase
         .from("SoftwareSkill")
         .select("*");
 
-      let { data: languageSkills, error: languageError } = await supabase
+      const { data: languageSkills, error: languageError } = await supabase
         .from("LanguageSkill")
         .select("*");
 
-      let { data: projectArr, error: errorProjects } = await supabase
+      const { data: projectArr, error: errorProjects } = await supabase
         .from("Project")
         .select("*");
 
@@ -126,7 +126,7 @@ export function UserContextProvider(props: React.PropsWithChildren) {
 
         const allSoftwareSkills = softwareSkills
           .map((item) => item as SoftwareType)
-          .sort((a, b) => a.id - b.id);
+          .sort((a, b) => a.orderNum - b.orderNum);
 
         const educationArr = educationData.map(
           (item) =>

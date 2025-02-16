@@ -62,7 +62,7 @@ function ProjectPanel(props: ProjectPanelProps) {
           return null;
       }
     });
-  }, [props.content]);
+  }, [props.content, key, t]);
 
   return (
     <div className={classes.backdrop} onClick={closePresentation}>

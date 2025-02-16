@@ -5,8 +5,8 @@
 }
 
 .content {
-  border-left: 5px rgb(19, 168, 168) dashed;
-  border-right: 5px rgb(19, 168, 168) dashed;
+  border-left: 4px rgb(19, 168, 168) solid;
+  border-right: 4px rgb(19, 168, 168) solid;
   min-height: 80vh;
   height: auto;
   padding: 10px;

@@ -49,11 +49,11 @@
 
 .submit-btn {
   background-color: rgb(65, 212, 212);
-  border: 1px solid rgb(8, 122, 122) solid;
+  border: 1px solid rgb(8, 122, 122);
   color: rgb(8, 122, 122);
   font-weight: 800;
   border-radius: 0.5rem;
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   padding: 0.2rem 0.5rem;
   transition: all ease-in-out 0.4s;
   cursor: pointer;

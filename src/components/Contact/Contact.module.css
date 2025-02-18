@@ -79,6 +79,7 @@
 
 .noBulletList li {
   display: flex;
+  align-items: baseline;
   flex-wrap: wrap;
   gap: 7px;
   margin-top: 10px;

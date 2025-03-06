@@ -62,10 +62,10 @@ nav > ul > li {
 }
 
 .nav_element:global(.active) {
+  color: rgb(6, 179, 179);
   text-decoration: underline 3px;
-  text-decoration-style: dashed;
   text-underline-position: under;
-  text-underline-offset: 3px;
+  text-underline-offset: 2px;
 }
 
 @media only screen and (max-width: 600px) {

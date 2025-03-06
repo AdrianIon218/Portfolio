@@ -41,7 +41,7 @@ export default function NavComp() {
       <nav className={classes.nav}>
         <img
           className={classes.logo}
-          src="https://nxssaifxsplrahljuqkr.supabase.co/storage/v1/object/public/images/MyLogo.png"
+          src="https://nxssaifxsplrahljuqkr.supabase.co/storage/v1/object/public/images//logo_header.png"
           alt="LOGO"
         />
         <ul>

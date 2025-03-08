@@ -35,11 +35,11 @@ export default function Card(props: CardProps) {
       <img
         key={`${key}-${index}`}
         alt={item.name}
-        className={classes.category_container}
+        className={classes.categoryContainer}
         src={item.photo}
       />
     ) : (
-      <div key={`${key}-${index}`} className={classes.category_container}>
+      <div key={`${key}-${index}`} className={classes.categoryContainer}>
         {item.name}
       </div>
     );
@@ -56,8 +56,8 @@ export default function Card(props: CardProps) {
           linkBtnLabel={props.linkBtnLabel}
         />
       )}
-      <div className={classes.CardElement} onClick={onCardClick}>
-        <div className={classes.row_container}>{categories}</div>
+      <div className={classes.cardElement} onClick={onCardClick}>
+        <div className={classes.rowContainer}>{categories}</div>
         <div className={classes.card}>
           <img src={props.photoLink} alt={props.title} onLoad={props.onLoad} />
           <label>{props.title}</label>

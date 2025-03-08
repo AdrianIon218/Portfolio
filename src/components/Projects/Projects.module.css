@@ -1,30 +1,23 @@
 .cardsContainer {
-  margin-top: 10px;
-  margin-left: 20px;
-  margin-right: 20px;
+  padding: 2rem;
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
+  justify-content: center;
+  gap: 2.2rem;
 }
 
-@media only screen and (max-width: 465px) {
-  .cardsContainer {
-    justify-content: center;
-  }
-}
-
-.CardElement {
+.cardElement {
   position: relative;
   cursor: pointer;
   transition: box-shadow ease-in 0.4s;
 }
 
-.CardElement:hover > div > .category_container {
+.cardElement:hover > div > .categoryContainer {
   box-shadow: rgba(0, 0, 0, 0.4) 0px -2px 4px,
     rgba(0, 0, 0, 0.3) 0px -3px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
-.CardElement:hover > .card {
+.cardElement:hover > .card {
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
@@ -32,7 +25,7 @@
   cursor: pointer;
 }
 
-.CardElement .tooltiptext {
+.cardElement .tooltiptext {
   visibility: hidden;
   min-width: 7rem;
   background-color: rgb(84, 82, 82);
@@ -50,7 +43,7 @@
   transition: opacity 0.9s;
 }
 
-.CardElement .tooltiptext::after {
+.cardElement .tooltiptext::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -62,13 +55,13 @@
 }
 
 @media only screen and (pointer: fine) {
-  .CardElement:hover .tooltiptext {
+  .cardElement:hover .tooltiptext {
     visibility: visible;
     opacity: 1;
   }
 }
 
-.category_container {
+.categoryContainer {
   height: 2em;
   width: 2em;
   border-radius: 14%;
@@ -79,7 +72,7 @@
   transition: box-shadow ease-in 0.5s;
 }
 
-div.category_container {
+div.categoryContainer {
   padding-left: 2px;
   padding-right: 2px;
   width: auto;
@@ -88,7 +81,7 @@ div.category_container {
   transition: box-shadow ease-in 0.5s;
 }
 
-.row_container {
+.rowContainer {
   position: absolute;
   top: -12px;
   left: -0.8em;
@@ -107,7 +100,7 @@ div.category_container {
   align-items: center;
   border: 5px rgb(15, 143, 143) solid;
   border-radius: 5px;
-  background-color: rgb(75, 162, 162);
+  background-color: rgba(75, 162, 162, 0.3);
   cursor: pointer;
   transition: box-shadow ease-in 0.4s;
 }

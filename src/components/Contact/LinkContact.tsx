@@ -8,7 +8,7 @@ function LinkContact(props: { href: string; name: string }) {
         aria-hidden="true"
       />
       <a
-        className={classes.contact_link}
+        className={classes.contactLink}
         href={props.href}
         target="_blank"
         rel="noreferrer"

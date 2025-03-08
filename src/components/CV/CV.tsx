@@ -23,7 +23,7 @@ export default function CV() {
   }
 
   return (
-    <section className={classes.pageContainer}>
+    <div className={classes.pageContainer}>
       {cvData && <Profile {...cvData} />}
 
       {educationArr && <EducationList educationArr={educationArr} />}
@@ -36,6 +36,6 @@ export default function CV() {
       )}
 
       {jobsArr && <JobsList jobsArr={jobsArr} />}
-    </section>
+    </div>
   );
 }

@@ -15,9 +15,8 @@ type ProfileProps = {
 };
 
 function calculateAge(birthdate: string) {
-  var diff_ms = Date.now() - new Date(birthdate).getTime();
-  var age_dt = new Date(diff_ms);
-  return Math.abs(age_dt.getUTCFullYear() - 1970);
+  const diff_ms = Date.now() - new Date(birthdate).getTime();
+  return Math.abs(new Date(diff_ms).getUTCFullYear() - 1970);
 }
 
 export default function Profile(props: ProfileProps) {

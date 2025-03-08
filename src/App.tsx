@@ -22,7 +22,7 @@ function App() {
 
   useEffect(() => {
     i18n.changeLanguage(activeLanguage);
-  }, [activeLanguage]);
+  }, [i18n, activeLanguage]);
 
   return (
     <BrowserRouter>

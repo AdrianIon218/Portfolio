@@ -121,6 +121,7 @@
   padding-right: 0;
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 15%;
+  background-color: rgba(75, 162, 162, 0.1);
   box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
     rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
     rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,

@@ -77,7 +77,7 @@ export default function MessageForm() {
             ></textarea>
           </li>
           <li>
-            <button className={classes["submit-btn"]} disabled={disableForm}>
+            <button className={classes.submitBtn} disabled={disableForm}>
               {t("contacts.send")}
             </button>
           </li>

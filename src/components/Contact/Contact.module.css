@@ -28,8 +28,8 @@
   margin-right: 3px;
 }
 
-.contact_link,
-.contact_link:link {
+.contactLink,
+.contactLink:link {
   text-decoration: none;
   color: inherit;
   font-weight: 700;
@@ -38,7 +38,7 @@
   transition: text-shadow 0.4s;
 }
 
-.contact_link:hover {
+.contactLink:hover {
   text-shadow: 1px 0px 10px rgb(15, 153, 153);
 }
 
@@ -47,7 +47,7 @@
   padding-left: 7px;
 }
 
-.submit-btn {
+.submitBtn {
   background-color: rgb(65, 212, 212);
   border: 1px solid rgb(8, 122, 122);
   color: rgb(8, 122, 122);
@@ -60,18 +60,18 @@
   outline: none;
 }
 
-.submit-btn:hover,
-.submit-btn:focus,
-.submit-btn:disabled {
+.submitBtn:hover,
+.submitBtn:focus,
+.submitBtn:disabled {
   color: var(--color-cyan-1);
   background-color: var(--color-blue-4);
 }
 
-.submit-btn:active {
+.submitBtn:active {
   transform: translateY(8px);
 }
 
-.submit-btn:disabled {
+.submitBtn:disabled {
   cursor: default;
   transform: none;
   opacity: 0.7;
@@ -87,7 +87,7 @@
 
 .noBulletList li input {
   border-radius: 5px;
-  border: 3px rgb(20, 140, 140) solid;
+  border: 2px rgb(20, 140, 140) solid;
   height: 20px;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   color: rgb(19, 168, 168);
@@ -107,7 +107,7 @@
 
 .noBulletList li textarea {
   border-radius: 10px;
-  border: 3px rgb(20, 140, 140) solid;
+  border: 2px rgb(20, 140, 140) solid;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   color: rgb(19, 168, 168);
   font-weight: 700;

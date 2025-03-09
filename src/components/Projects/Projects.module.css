@@ -164,13 +164,14 @@ body:has(.backdrop) nav {
 .contentContainer {
   transform: scale(0.6);
   opacity: 0;
-  -webkit-animation: presentation_anim 0.3s ease-in-out 0.3s 1 normal forwards;
-  -moz-animation: presentation_anim 0.3s ease-in-out 0.3s 1 normal forwards;
-  -o-animation: presentation_anim 0.3s ease-in-out 0.3s 1 normal forwards;
-  animation: presentation_anim 0.3s ease-in-out 0.3s 1 normal forwards;
+  -webkit-animation: presentationAnimation 0.3s ease-in-out 0.3s 1 normal
+    forwards;
+  -moz-animation: presentationAnimation 0.3s ease-in-out 0.3s 1 normal forwards;
+  -o-animation: presentationAnimation 0.3s ease-in-out 0.3s 1 normal forwards;
+  animation: presentationAnimation 0.3s ease-in-out 0.3s 1 normal forwards;
 }
 
-@keyframes presentation_anim {
+@keyframes presentationAnimation {
   from {
     transform: scale(0.6);
     opacity: 0;
@@ -182,14 +183,15 @@ body:has(.backdrop) nav {
 }
 
 .contentContainer.closePanel {
-  -webkit-animation: presentation_close_anim 0.3s ease-in-out 0s 1 normal
+  -webkit-animation: presentationCloseAnimation 0.3s ease-in-out 0s 1 normal
     forwards;
-  -moz-animation: presentation_close_anim 0.3s ease-in-out 0s 1 normal forwards;
-  -o-animation: presentation_close_anim 0.3s ease-in-out 0s 1 normal forwards;
-  animation: presentation_close_anim 0.3s ease-in-out 0s 1 normal forwards;
+  -moz-animation: presentationCloseAnimation 0.3s ease-in-out 0s 1 normal
+    forwards;
+  -o-animation: presentationCloseAnimation 0.3s ease-in-out 0s 1 normal forwards;
+  animation: presentationCloseAnimation 0.3s ease-in-out 0s 1 normal forwards;
 }
 
-@keyframes presentation_close_anim {
+@keyframes presentationCloseAnimation {
   from {
     transform: scale(1);
     opacity: 1;
@@ -207,7 +209,7 @@ body:has(.backdrop) nav {
   height: 100%;
 }
 
-.project_presenation__exit {
+.projectPresentationExit {
   grid-column: 2;
   font-size: 2.5rem;
   padding: 0;
@@ -222,7 +224,7 @@ body:has(.backdrop) nav {
   transition: text-shadow 0.4s;
 }
 
-.project_presenation__exit:hover {
+.projectPresentationExit:hover {
   text-shadow: 0 0 5px rgb(192, 1, 1);
   text-shadow: 1px 1px 2px orange, 0 0 1em red, 0 0 0.2em red;
 }
@@ -323,7 +325,7 @@ body:has(.backdrop) nav {
   transform: translateY(3px);
 }
 
-.current_page_indicator {
+.currentPageIndicator {
   grid-column: 1/2;
   grid-row: 1/2;
   transform: translateY(-20%);
@@ -356,7 +358,7 @@ body:has(.backdrop) nav {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.projectPresentation .btn_link {
+.projectPresentation .btnLink {
   align-self: center;
   cursor: pointer;
   font-size: 1.2rem;
@@ -377,7 +379,7 @@ body:has(.backdrop) nav {
   margin-bottom: 3rem;
 }
 
-.projectPresentation .btn_link:hover {
+.projectPresentation .btnLink:hover {
   color: rgba(255, 255, 255, 0.9);
   background-image: linear-gradient(
     to right,

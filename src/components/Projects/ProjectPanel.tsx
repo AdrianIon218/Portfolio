@@ -68,7 +68,7 @@ function ProjectPanel(props: ProjectPanelProps) {
     <div className={classes.backdrop} onClick={closePresentation}>
       <div className={classes.contentContainer} ref={panelRef}>
         {!isNotThePortfolioPage && (
-          <div className={classes.current_page_indicator}>
+          <div className={classes.currentPageIndicator}>
             {t("project.currentPage")}
           </div>
         )}
@@ -78,14 +78,14 @@ function ProjectPanel(props: ProjectPanelProps) {
         >
           <h2>{props.title}</h2>
           {isNotThePortfolioPage && (
-            <button onClick={openCardLink} className={classes.btn_link}>
+            <button onClick={openCardLink} className={classes.btnLink}>
               {props.linkBtnLabel}
             </button>
           )}
           {contentElements}
         </div>
         <button
-          className={classes.project_presenation__exit}
+          className={classes.projectPresentationExit}
           onClick={closePresentation}
         >
           &times;

@@ -5,8 +5,8 @@ function NoPage() {
   const { t } = useTranslation();
 
   return (
-    <section className={classes["no-page-ctn"]}>
-      <div className={classes["no-page"]}>
+    <section className={classes.noPageCtn}>
+      <div className={classes.noPage}>
         <p className={classes.emoji}>&#128533;</p>
         <h1>
           {t("noPageMessage")}

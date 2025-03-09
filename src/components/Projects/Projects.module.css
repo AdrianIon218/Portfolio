@@ -295,7 +295,7 @@ body:has(.backdrop) nav {
   transition: all 0.4s;
 }
 
-.icon_link {
+.iconLink {
   display: inline-block;
   height: 1rem;
   width: 24px;
@@ -315,7 +315,7 @@ body:has(.backdrop) nav {
 }
 
 .repoLink a:hover,
-.icon_link:hover ~ a {
+.iconLink:hover ~ a {
   text-shadow: 1px 0px 10px rgb(15, 153, 153);
 }
 

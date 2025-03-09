@@ -19,7 +19,7 @@ function RepoLink(props: RepoLinkProps) {
 
   return (
     <div className={classes.repoLink}>
-      <div className={classes.icon_link} style={svgStyle} />
+      <div className={classes.iconLink} style={svgStyle} />
       <a href={props.link} target="_blank" rel="noreferrer">
         {t("viewRepo")}
       </a>

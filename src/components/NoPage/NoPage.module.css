@@ -1,19 +1,19 @@
-.no-page-ctn {
+.noPageCtn {
   display: flex;
   justify-content: center;
 }
 
-.no-page {
-  background-color: rgba(91, 198, 198, 0.7);
+.noPage {
+  background: radial-gradient(white, rgba(91, 198, 198, 0.5));
   color: rgb(7, 112, 112);
-  border: 3px solid;
+  border: 2px solid;
   border-radius: 10px;
   height: 30em;
   width: 60%;
   padding: 0.6rem;
 }
 
-.no-page h1 {
+.noPage h1 {
   text-align: center;
 }
 
@@ -30,7 +30,7 @@ span.red {
 }
 
 @media all and (max-width: 800px) {
-  .no-page {
+  .noPage {
     width: 80%;
   }
 }

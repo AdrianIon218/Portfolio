@@ -12,7 +12,7 @@ export enum NavTabs {
 }
 
 export default function NavComp() {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   function onClickHandler(to: NavTabs) {
     if (to !== NavTabs.CONTACT) {
@@ -26,14 +26,14 @@ export default function NavComp() {
         <li key={`${element}-${index}`}>
           <NavLink
             to={element}
-            className={classes.nav_element}
+            className={classes.navElement}
             onClick={() => onClickHandler(element)}
           >
             {t(`nav.${element}`)}
           </NavLink>
         </li>
       )),
-    [i18n.language]
+    [t]
   );
 
   return (

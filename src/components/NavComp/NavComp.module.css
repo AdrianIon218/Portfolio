@@ -42,7 +42,7 @@ nav > ul > li {
   margin-right: 10px;
 }
 
-.nav_element {
+.navElement {
   font-family: Lora, Roboto;
   font-size: 1.5em;
   color: rgb(19, 168, 168);
@@ -52,16 +52,16 @@ nav > ul > li {
   transition: text-shadow 0.2s ease-in-out;
 }
 
-.nav_element:hover {
+.navElement:hover {
   text-shadow: 1px 0px 2px rgb(12, 244, 244);
 }
 
-.nav_element:global(.active):hover {
+.navElement:global(.active):hover {
   text-shadow: none;
   cursor: default;
 }
 
-.nav_element:global(.active) {
+.navElement:global(.active) {
   color: rgb(6, 179, 179);
   text-decoration: underline 3px;
   text-underline-position: under;

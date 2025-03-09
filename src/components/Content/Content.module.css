@@ -1,7 +1,14 @@
 .main {
   display: grid;
   grid-template-columns: 100px 1fr 100px;
-  background-color: var(--color-blue-1);
+  background: linear-gradient(
+    to right bottom,
+    var(--color-blue-1) 30%,
+    white 70%,
+    var(--color-blue-1)
+  );
+  margin-top: -0.4rem;
+  padding-top: 0.4rem;
 }
 
 .content {

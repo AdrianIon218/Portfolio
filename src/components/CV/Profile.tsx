@@ -32,7 +32,6 @@ export default function Profile(props: ProfileProps) {
         <BluredLoadImage
           image={props.photoProfile}
           bluredImg={props.bluredPhotoProfile}
-          ctnClasses={classes.myPhoto}
         />
       </div>
       <div className={`${classes.center} ${classes.divColumn}`}>

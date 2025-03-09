@@ -1,10 +1,10 @@
 import { useState, useSyncExternalStore } from "react";
 import classes from "./BluredLoadImage.module.css";
+import classesCV from "../CV/CV.module.css";
 
 interface IBluredLoadImageProps {
   bluredImg: string;
   image: string;
-  ctnClasses?: string;
 }
 
 const subscribe = (listener: () => void) => {
@@ -35,7 +35,7 @@ function BluredLoadImage(props: IBluredLoadImageProps) {
 
   return (
     <div
-      className={`${props.ctnClasses}  ${classes.blurLoad} ${
+      className={`${classesCV.myPhoto}  ${classes.blurLoad} ${
         (isImageAlreadyLoadedInSession || isImageLoaded) && classes.loaded
       }`}
       style={{

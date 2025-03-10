@@ -26,8 +26,13 @@ Because of module CSS .backdrop class mutates
 .backdrop => ._backdrop_unic_id
 */
 @media only screen and (pointer: fine) {
-  body:has([class*="backdrop"]) .main {
-    grid-template-columns: 100px 1fr 115px;
+  /*
+  Firefox doesn't supports scrollbar styles
+  */
+  @supports selector(body::-webkit-scrollbar) {
+    body:has([class*="backdrop"]) .main {
+      grid-template-columns: 100px 1fr 115px;
+    }
   }
 }
 

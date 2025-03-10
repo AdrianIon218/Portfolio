@@ -119,13 +119,20 @@ body:has(.backdrop) {
   overflow-y: hidden;
 }
 
-body:has(.backdrop) nav {
-  padding-right: 20px;
+/*
+ Firefox doesn't support scrollbar styles
+*/
+@supports selector(body::-webkit-scrollbar) {
+  body:has(.backdrop) nav {
+    padding-right: 20px;
+  }
 }
 
 @media only screen and (max-width: 450px) {
-  body:has(.backdrop) nav {
-    padding-right: 5px;
+  @supports selector(body::-webkit-scrollbar) {
+    body:has(.backdrop) nav {
+      padding-right: 5px;
+    }
   }
 }
 

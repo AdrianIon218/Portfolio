@@ -27,14 +27,14 @@ export default function Skill(props: SkillListProps) {
           <i className="fas fa-laptop-code" />
           &nbsp;Software:
         </h3>
-        <ul className={classes.listSquare}>{softwareSkillElements}</ul>
+        <ul className={classes.softSkillsCtn}>{softwareSkillElements}</ul>
       </div>
       <div>
         <h3>
           <i className="fas fa-apple-alt" />
           &nbsp;{t("skills.languages")}
         </h3>
-        <ul className={classes.listSquare}>{languageSillElements}</ul>
+        <ul>{languageSillElements}</ul>
       </div>
     </>
   );

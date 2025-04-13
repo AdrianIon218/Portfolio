@@ -3,6 +3,7 @@ import { Suspense, lazy, useEffect, useSyncExternalStore } from "react";
 import Layout from "./components/Layout/Layout";
 import LoadingSpinner from "./components/Layout/LoadingSpinner";
 import { useTranslation } from "react-i18next";
+import Cookies from "js-cookie";
 
 const CV = lazy(() => import("./components/CV/CV"));
 const ContactPage = lazy(() => import("./components/Contact/ContactPage"));
@@ -17,7 +18,7 @@ function App() {
         window.addEventListener("storage", listener);
         return () => window.removeEventListener("storage", listener);
       },
-      () => localStorage.getItem("@activeLanguage")
+      () => Cookies.get("@activeLanguage")
     ) || i18n.language;
 
   useEffect(() => {

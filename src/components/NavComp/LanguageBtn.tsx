@@ -1,6 +1,7 @@
 import { useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import classes from "./LanguageBtn.module.css";
+import Cookies from "js-cookie";
 
 type LanguageTranslations = {
   [key: string]: string;
@@ -52,7 +53,7 @@ function LanguageBtn() {
   function setLanguage(ev: React.MouseEvent<HTMLElement>, lang: string) {
     ev.stopPropagation();
     if (i18n.language !== lang) {
-      localStorage.setItem("@activeLanguage", lang);
+      Cookies.set("@activeLanguage", lang);
       i18n.changeLanguage(lang);
     }
   }

@@ -3,7 +3,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 2.2rem;
+  gap: 3rem;
 }
 
 .cardElement {

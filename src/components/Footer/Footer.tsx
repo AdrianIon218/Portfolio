@@ -3,7 +3,7 @@ import ButtonIcon from "../CustomedElements/ButtonIcon";
 import { useContext } from "react";
 import { UserContext } from "../Context/UserContext";
 import { useLocation } from "react-router-dom";
-import { NavTabs } from "../NavComp/NavComp";
+import { NavTabs } from "@/Interfaces/Enumerations";
 
 export default function Footer() {
   const footerData = { ...useContext(UserContext).footerData };

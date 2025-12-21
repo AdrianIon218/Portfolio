@@ -23,8 +23,6 @@ export default function Profile(props: ProfileProps) {
   const { t } = useTranslation();
   const { birthdate } = props;
 
-  const age = calculateAge(birthdate);
-
   return (
     <section>
       <h2 className={classes.title}>{props.name}</h2>
@@ -36,7 +34,9 @@ export default function Profile(props: ProfileProps) {
       </div>
       <div className={`${classes.center} ${classes.divColumn}`}>
         <i className="fas fa-map-marker-alt">&nbsp;{props.address}</i>
-        <i className="fas fa-male">&nbsp;{t("profile.age", { age })}</i>
+        <i className="fas fa-male">
+          &nbsp;{t("profile.age", { age: calculateAge(birthdate) })}
+        </i>
         <i className="fas fa-suitcase">&nbsp;{props.jobTitle}</i>
         <Nationality isEuropean={props.isEuropean} />
         <p className={classes.ctnCenter}>

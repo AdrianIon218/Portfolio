@@ -4,12 +4,7 @@ import { NavLink } from "react-router-dom";
 import toast from "react-hot-toast";
 import LanguageBtn from "./LanguageBtn";
 import { useTranslation } from "react-i18next";
-
-export enum NavTabs {
-  CV = "CV",
-  PROJECTS = "Projects",
-  CONTACT = "Contact",
-}
+import { NavTabs } from "@interfaces/Enumerations";
 
 export default function NavComp() {
   const { t } = useTranslation();

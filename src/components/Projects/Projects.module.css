@@ -1,8 +1,9 @@
 .cardsContainer {
-  padding: 2rem;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  height: 100%;
+  place-content: center;
+  margin-top: -1rem;
   gap: 3rem;
 }
 
@@ -282,6 +283,12 @@ body:has(.backdrop) {
 @media only screen and (min-width: 420px) {
   .projectPresentation p {
     hyphens: none;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .cardsContainer {
+    margin-top: 3rem;
   }
 }
 

@@ -38,7 +38,7 @@ export default function MessageForm() {
       <form onSubmit={handleSubmit(onSubmit)}>
         <ul className={classes.noBulletList}>
           <li>
-            <label htmlFor="name">
+            <label htmlFor="name" className={classes.standardFont}>
               {t("contacts.name")} <span className={classes.redSpan}>*</span>{" "}
             </label>
             <input
@@ -53,7 +53,7 @@ export default function MessageForm() {
             />
           </li>
           <li>
-            <label htmlFor="email">
+            <label htmlFor="email" className={classes.standardFont}>
               {t("contacts.email")} <span className={classes.redSpan}>*</span>{" "}
             </label>
             <input

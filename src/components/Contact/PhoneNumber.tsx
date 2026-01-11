@@ -11,7 +11,7 @@ export default function PhoneNumber(
         src={props.photoName}
         alt={props.alt}
       />
-      <div>{props.children}</div>
+      <div className={classes.standardFont}>{props.children}</div>
     </div>
   );
 }

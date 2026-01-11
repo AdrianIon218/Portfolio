@@ -1,7 +1,13 @@
 .personalContact {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 0.8rem;
+}
+
+.contactsHeader {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
 }
 
 .phoneNationality {
@@ -12,9 +18,13 @@
   margin-right: 10px;
 }
 
-.mailMargin {
+.mailAddress {
   margin-left: 3px;
   margin-right: 10px;
+}
+
+.standardFont {
+  font-weight: 600;
 }
 
 .divRowCentered {

@@ -12,9 +12,9 @@ export default function ContactPage() {
   }
 
   return (
-    <>
+    <div className="centered-container">
       <PersonalContacts contacts={contactArr} />
       <MessageForm />
-    </>
+    </div>
   );
 }

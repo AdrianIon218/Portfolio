@@ -42,7 +42,7 @@ export default function PersonalContacts(props: { contacts: ContactType[] }) {
 
   return (
     <React.Fragment>
-      <h2>{t("contacts.title")}</h2>
+      <h2 className={classes.contactsHeader}>{t("contacts.title")}</h2>
       <div className={classes.personalContact}>{contactsElements}</div>
     </React.Fragment>
   );

@@ -3,7 +3,7 @@ import PhoneNumber from "./PhoneNumber";
 import Email from "./Email";
 import LinkContact from "./LinkContact";
 import React, { useMemo } from "react";
-import { ContactType } from "../Context/UserContextTypes";
+import { ContactType } from "../../Interfaces/UserContextTypes";
 import { useTranslation } from "react-i18next";
 
 export default function PersonalContacts(props: { contacts: ContactType[] }) {

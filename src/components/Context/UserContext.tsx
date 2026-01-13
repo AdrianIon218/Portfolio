@@ -13,7 +13,7 @@ import {
   UserCtxType,
   ProfileData,
   LangProp,
-} from "./UserContextTypes";
+} from "../../Interfaces/UserContextTypes";
 import { useTranslation } from "react-i18next";
 
 const userCtxInit: UserCtxType = {

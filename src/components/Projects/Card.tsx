@@ -1,33 +1,16 @@
 import classes from "./Projects.module.css";
-import ProjectPanel from "./ProjectPanel";
-import { useId, useState } from "react";
-import { CategoryIcon, ContentType } from "../Context/UserContextTypes";
+import { useId } from "react";
+import { ICardProps } from "@/Interfaces/ProjectInterfaces";
 
-type CardProps = {
-  photoLink: string;
-  porjectLink: string;
-  linkBtnLabel: string;
-  categories: CategoryIcon[];
-  description: string;
-  title: string;
-  content: ContentType[];
-  onLoad: () => void;
-};
-
-export default function Card(props: CardProps) {
-  const [isProjectPanelShown, setProjectPanel] = useState(false);
+export default function Card(props: ICardProps) {
   const key = useId();
 
   function onCardClick() {
     if (props.content) {
-      setProjectPanel(true);
+      props.onClick();
     } else {
       window.open(props.porjectLink, "_blank");
     }
-  }
-
-  function onClosePanel() {
-    setProjectPanel(false);
   }
 
   const categories = props.categories.map((item, index) => {
@@ -46,31 +29,20 @@ export default function Card(props: CardProps) {
   });
 
   return (
-    <>
-      {isProjectPanelShown && (
-        <ProjectPanel
-          onClosePanel={onClosePanel}
-          content={props.content}
-          title={props.title}
-          link={props.porjectLink}
-          linkBtnLabel={props.linkBtnLabel}
-        />
-      )}
-      <div className={classes.cardElement} onClick={onCardClick}>
-        <div className={classes.rowContainer}>{categories}</div>
-        <div className={classes.card}>
-          <img src={props.photoLink} alt={props.title} onLoad={props.onLoad} />
-          <label>{props.title}</label>
-        </div>
-        <span
-          className={classes.tooltiptext}
-          onClick={(event) => {
-            event.stopPropagation();
-          }}
-        >
-          {props.description}
-        </span>
+    <div className={classes.cardElement} onClick={onCardClick}>
+      <div className={classes.rowContainer}>{categories}</div>
+      <div className={classes.card}>
+        <img src={props.photoLink} alt={props.title} onLoad={props.onLoad} />
+        <label>{props.title}</label>
       </div>
-    </>
+      <span
+        className={classes.tooltiptext}
+        onClick={(event) => {
+          event.stopPropagation();
+        }}
+      >
+        {props.description}
+      </span>
+    </div>
   );
 }

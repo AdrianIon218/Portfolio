@@ -3,10 +3,15 @@ import classes from "./Projects.module.css";
 import { useContext, useState } from "react";
 import { UserContext } from "../Context/UserContext";
 import LoadingSpinner from "../Layout/LoadingSpinner";
+import ProjectPanel from "./ProjectPanel";
+import { IProjectData } from "@/Interfaces/ProjectInterfaces";
 
 export default function ProjectsPage() {
   const { projectsArr } = useContext(UserContext);
   const [isFirstCardLoaded, setIsCardLoaded] = useState(false);
+  const [currentProject, setCurrentProject] = useState<IProjectData | null>(
+    null
+  );
 
   if (!projectsArr) {
     return <LoadingSpinner />;
@@ -26,6 +31,17 @@ export default function ProjectsPage() {
         onLoad={() => {
           index === 0 && setIsCardLoaded(true);
         }}
+        onClick={() =>
+          setCurrentProject({
+            photoLink: project.photo,
+            porjectLink: project.link,
+            linkBtnLabel: project.linkBtnLabel,
+            categories: project.categories,
+            description: project.description,
+            title: project.title,
+            content: project.content,
+          })
+        }
       />
     );
   });
@@ -33,6 +49,15 @@ export default function ProjectsPage() {
   return (
     <>
       {!isFirstCardLoaded && <LoadingSpinner />}
+      {currentProject && (
+        <ProjectPanel
+          onClosePanel={() => setCurrentProject(null)}
+          content={currentProject.content}
+          title={currentProject.title}
+          link={currentProject.porjectLink}
+          linkBtnLabel={currentProject.linkBtnLabel}
+        />
+      )}
       <section
         className={classes.cardsContainer}
         style={isFirstCardLoaded ? {} : { display: "none" }}

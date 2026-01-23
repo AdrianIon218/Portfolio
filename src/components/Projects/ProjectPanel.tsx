@@ -1,7 +1,7 @@
 import { useId, useMemo, useRef } from "react";
 import classes from "./Projects.module.css";
 import RepoLink from "./RepoLink";
-import { ContentType } from "../../Interfaces/UserContextTypes";
+import { ContentType } from "@interfaces/UserContextTypes";
 import { useTranslation } from "react-i18next";
 import QRCodeImg from "./QRCodeImg";
 

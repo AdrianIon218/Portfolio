@@ -13,7 +13,7 @@ import {
   UserCtxType,
   ProfileData,
   LangProp,
-} from "../../Interfaces/UserContextTypes";
+} from "@interfaces/UserContextTypes";
 import { useTranslation } from "react-i18next";
 
 const userCtxInit: UserCtxType = {
@@ -138,7 +138,7 @@ export function UserContextProvider(props: React.PropsWithChildren) {
               period: item.period,
               detailsLink: item.details,
               lang: item.lang,
-            } as EduationType & LangProp)
+            }) as EduationType & LangProp
         );
 
         const jobsArr = jobsData as (JobType & LangProp)[];

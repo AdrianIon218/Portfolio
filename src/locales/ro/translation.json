@@ -31,7 +31,8 @@
     "errorMessage": "A apărut o eroare, încercați mai târziu!",
     "messagePlaceholder": "Mesaj...",
     "namePlaceholder": "Andrei",
-    "emailPlaceholder": "nume@yahoo.com"
+    "emailPlaceholder": "nume@yahoo.com",
+    "invalidEmail": "Adresă de email e invalidă"
   },
   "skills": {
     "title": "Aptitudini",

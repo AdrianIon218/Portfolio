@@ -31,7 +31,8 @@
     "errorMessage": "Une erreur s'est produite, veuillez réessayer plus tard!",
     "messagePlaceholder": "Message...",
     "namePlaceholder": "Alex",
-    "emailPlaceholder": "nom@yahoo.com"
+    "emailPlaceholder": "nom@yahoo.com",
+    "invalidEmail": "L'adresse e-mail n'est pas valide"
   },
   "skills": {
     "title": "Les compétences",

@@ -31,7 +31,8 @@
     "errorMessage": "An error has occurred, please try again later!",
     "messagePlaceholder": "Message...",
     "namePlaceholder": "Andrew",
-    "emailPlaceholder": "name@yahoo.com"
+    "emailPlaceholder": "name@yahoo.com",
+    "invalidEmail": "Invalid email address"
   },
   "skills": {
     "title": "Skills",

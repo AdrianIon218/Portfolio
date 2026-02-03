@@ -1,17 +1,36 @@
+import { joiResolver } from "@hookform/resolvers/joi";
 import { FieldValues, useForm } from "react-hook-form";
 import classes from "./Contact.module.css";
 import toast, { useToasterStore } from "react-hot-toast";
 import { supabase } from "../../supabse";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { contactFormSchema } from "./validation";
 
 export default function MessageForm() {
-  const { register, handleSubmit, reset } = useForm();
+  const { t } = useTranslation();
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors, dirtyFields, isValid, touchedFields },
+  } = useForm({
+    mode: "onBlur",
+    defaultValues: {
+      name: "",
+      email: "",
+      message: "",
+    },
+    resolver: joiResolver(contactFormSchema),
+  });
   const [isMessageSending, setIsMessageSending] = useState(false);
   const { toasts } = useToasterStore();
   const isToastAlreadyshown = toasts.filter((t) => t.visible).length > 0;
   const disableForm = isMessageSending || isToastAlreadyshown;
-  const { t } = useTranslation();
+  const disableSubmit =
+    disableForm || Object.keys(dirtyFields).length !== 3 || !isValid;
+
+  console.log(errors?.email, touchedFields);
 
   async function onSubmit(formData: FieldValues) {
     const { name, email, message } = formData;
@@ -35,11 +54,12 @@ export default function MessageForm() {
   return (
     <section>
       <h2>{t("contacts.contactsTitle") as string}</h2>
-      <form onSubmit={handleSubmit(onSubmit)}>
+      <form onSubmit={handleSubmit(onSubmit)} noValidate>
         <ul className={classes.noBulletList}>
           <li>
             <label htmlFor="name" className={classes.standardFont}>
-              {t("contacts.name")} <span className={classes.redSpan}>*</span>{" "}
+              {t("contacts.name")}{" "}
+              <span className={classes.redSpan}>*</span>{" "}
             </label>
             <input
               id="name"
@@ -54,7 +74,8 @@ export default function MessageForm() {
           </li>
           <li>
             <label htmlFor="email" className={classes.standardFont}>
-              {t("contacts.email")} <span className={classes.redSpan}>*</span>{" "}
+              {t("contacts.email")}{" "}
+              <span className={classes.redSpan}>*</span>{" "}
             </label>
             <input
               id="email"
@@ -66,6 +87,11 @@ export default function MessageForm() {
               disabled={disableForm}
               {...register("email")}
             />
+            {errors.email?.type === "string.email" && (
+              <span className={classes.errorSpan}>
+                {t("contacts.invalidEmail")}
+              </span>
+            )}
           </li>
           <li>
             <textarea
@@ -77,7 +103,7 @@ export default function MessageForm() {
             ></textarea>
           </li>
           <li>
-            <button className={classes.submitBtn} disabled={disableForm}>
+            <button className={classes.submitBtn} disabled={disableSubmit}>
               {t("contacts.send")}
             </button>
           </li>

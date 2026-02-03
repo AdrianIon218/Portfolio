@@ -57,13 +57,20 @@
   padding-left: 7px;
 }
 
+.noBulletList li:last-child {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
 .submitBtn {
-  background-color: rgb(65, 212, 212);
+  background-color: rgb(91, 201, 201);
   border: 1px solid rgb(8, 122, 122);
   color: rgb(8, 122, 122);
+  letter-spacing: 0.5px;
   font-weight: 800;
-  border-radius: 0.5rem;
-  font-size: 0.9rem;
+  border-radius: 0.3rem;
+  font-size: 1rem;
   padding: 0.2rem 0.5rem;
   transition: all ease-in-out 0.4s;
   cursor: pointer;
@@ -100,9 +107,10 @@
   border: 2px rgb(20, 140, 140) solid;
   height: 20px;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  color: rgb(19, 168, 168);
+  color: rgb(80, 80, 80);
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
   font-weight: 700;
-  width: 35%;
   outline: none;
   outline: none;
   transition: all 0.3s;
@@ -110,20 +118,25 @@
 
 .noBulletList li input:focus,
 .noBulletList li textarea:focus {
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+  box-shadow:
+    rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
     rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-  border-color: rgb(14, 220, 243);
+  border-color: rgb(11, 205, 226);
 }
 
 .noBulletList li textarea {
   border-radius: 10px;
   border: 2px rgb(20, 140, 140) solid;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  color: rgb(19, 168, 168);
+  color: rgb(80, 80, 80);
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
   font-weight: 700;
-  width: 60%;
+  width: 100%;
   padding: 5px;
-  resize: none;
+  min-height: 10vh;
+  height: 30vh;
+  resize: vertical;
   outline: none;
 }
 
@@ -142,7 +155,7 @@
 
 .noBulletList li input::-webkit-input-placeholder,
 .noBulletList li textarea::-webkit-input-placeholder {
-  color: rgb(169, 167, 167);
+  color: rgb(159, 159, 159);
 }
 
 .noBulletList li input::-moz-placeholder,
@@ -164,6 +177,12 @@
   color: rgb(216, 53, 53);
   font-size: 16px;
   font-weight: 800;
+}
+
+.errorSpan {
+  color: rgb(216, 53, 53);
+  font-size: 0.85rem;
+  font-weight: 700;
 }
 
 @media only screen and (max-width: 600px) {

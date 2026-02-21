@@ -1,6 +1,6 @@
 import { EducationProps as EduationType } from "../components/CV/Education";
 import { JobProps as JobType } from "../components/CV/Job";
-import { LanguageType, SoftwareType } from "../components/CV/SkillSection";
+import { LanguageType, SoftwareType } from "./ProjectInterfaces";
 
 export type ProfileData = {
   name: string;

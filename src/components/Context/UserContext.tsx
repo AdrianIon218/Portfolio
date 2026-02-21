@@ -3,7 +3,6 @@ import React from "react";
 import { supabase } from "../../supabse";
 import { EducationProps as EduationType } from "../CV/Education";
 import { JobProps as JobType } from "../CV/Job";
-import { LanguageType, SoftwareType } from "../CV/SkillSection";
 import {
   ContactType,
   PhoneContact,
@@ -15,6 +14,7 @@ import {
   LangProp,
 } from "@interfaces/UserContextTypes";
 import { useTranslation } from "react-i18next";
+import { LanguageType, SoftwareType } from "@/Interfaces/ProjectInterfaces";
 
 const userCtxInit: UserCtxType = {
   cvData: false,
@@ -138,7 +138,7 @@ export function UserContextProvider(props: React.PropsWithChildren) {
               period: item.period,
               detailsLink: item.details,
               lang: item.lang,
-            }) as EduationType & LangProp
+            }) as EduationType & LangProp,
         );
 
         const jobsArr = jobsData as (JobType & LangProp)[];
@@ -147,7 +147,7 @@ export function UserContextProvider(props: React.PropsWithChildren) {
         const allLanguageSkills = languageSkills as (LanguageType & LangProp)[];
 
         const allProjects = (projectArr as (ProjectType & LangProp)[]).sort(
-          (a, b) => a.id - b.id
+          (a, b) => a.id - b.id,
         );
 
         setDataContainer(() => ({
@@ -187,19 +187,19 @@ export function UserContextProvider(props: React.PropsWithChildren) {
       currentContext.softwareSkills = dataContainer!.softwareSkills;
 
       currentContext.educationArr = dataContainer?.education.filter(
-        (item) => item.lang === Lang
+        (item) => item.lang === Lang,
       ) as EduationType[];
 
       currentContext.jobsArr = dataContainer?.jobs.filter(
-        (item) => item.lang === Lang
+        (item) => item.lang === Lang,
       ) as JobType[];
 
       currentContext.languageSkills = dataContainer?.languageSkills.filter(
-        (item) => item.lang === Lang
+        (item) => item.lang === Lang,
       ) as LanguageType[];
 
       currentContext.projectsArr = dataContainer?.projects.filter(
-        (item) => item.lang === Lang
+        (item) => item.lang === Lang,
       ) as ProjectType[];
 
       setUserData(() => currentContext);

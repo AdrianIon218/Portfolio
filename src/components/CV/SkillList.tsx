@@ -1,7 +1,7 @@
 import { useMemo } from "react";
 import classes from "./CV.module.css";
-import { SkillListProps } from "./SkillSection";
 import { useTranslation } from "react-i18next";
+import { SkillListProps } from "@/Interfaces/ProjectInterfaces";
 
 export default function Skill(props: SkillListProps) {
   const { t } = useTranslation();

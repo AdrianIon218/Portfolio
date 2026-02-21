@@ -1,0 +1,12 @@
+.centered {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.canvasContainer {
+  position: relative;
+  width: 40vw;
+  height: 30vh;
+  border-radius: 25%;
+  overflow: hidden;
+}

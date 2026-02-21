@@ -25,7 +25,7 @@ function GlobeContainer() {
             <sphereGeometry args={[2.5, 40, 40]} />
             <meshBasicMaterial map={texture} />
           </mesh>
-          <OrbitControls autoRotate enableZoom={false} />
+          <OrbitControls autoRotate enableZoom={false} enablePan={false} />
         </Canvas>
       </div>
     </div>

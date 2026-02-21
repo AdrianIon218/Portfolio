@@ -13,7 +13,7 @@ export default function MessageForm() {
     register,
     handleSubmit,
     reset,
-    formState: { errors, dirtyFields, isValid, touchedFields },
+    formState: { errors, dirtyFields, isValid },
   } = useForm({
     mode: "onBlur",
     defaultValues: {

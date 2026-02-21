@@ -30,8 +30,6 @@ export default function MessageForm() {
   const disableSubmit =
     disableForm || Object.keys(dirtyFields).length !== 3 || !isValid;
 
-  console.log(errors?.email, touchedFields);
-
   async function onSubmit(formData: FieldValues) {
     const { name, email, message } = formData;
     const currentDate = new Date().toLocaleDateString();

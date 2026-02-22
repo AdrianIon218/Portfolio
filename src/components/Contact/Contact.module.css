@@ -1,3 +1,9 @@
+.skillsContainer {
+  display: block;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
 .personalContact {
   display: flex;
   flex-direction: column;
@@ -193,5 +199,10 @@
 @media only screen and (max-width: 600px) {
   .noBulletList li input {
     width: 60%;
+  }
+
+  .skillsContainer {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
   }
 }

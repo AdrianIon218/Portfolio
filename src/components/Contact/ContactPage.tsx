@@ -3,6 +3,7 @@ import PersonalContacts from "./PersonalContacts";
 import { useContext } from "react";
 import { UserContext } from "../Context/UserContext";
 import LoadingSpinner from "../Layout/LoadingSpinner";
+import classes from "./Contact.module.css";
 
 export default function ContactPage() {
   const { contactArr } = useContext(UserContext);
@@ -12,7 +13,7 @@ export default function ContactPage() {
   }
 
   return (
-    <div className="centered-container">
+    <div className={classes.skillsContainer}>
       <PersonalContacts contacts={contactArr} />
       <MessageForm />
     </div>

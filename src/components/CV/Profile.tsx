@@ -24,26 +24,28 @@ export default function Profile(props: ProfileProps) {
   const { birthdate } = props;
 
   return (
-    <section>
-      <h2 className={classes.title}>{props.name}</h2>
-      <div className={classes.center}>
-        <BluredLoadImage
-          image={props.photoProfile}
-          bluredImg={props.bluredPhotoProfile}
-        />
-      </div>
-      <div className={`${classes.center} ${classes.divColumn}`}>
-        <i className="fas fa-map-marker-alt">&nbsp;{props.address}</i>
-        <i className="fas fa-male">
-          &nbsp;{t("profile.age", { age: calculateAge(birthdate) })}
-        </i>
-        <i className="fas fa-suitcase">&nbsp;{props.jobTitle}</i>
-        <Nationality isEuropean={props.isEuropean} />
-        <p className={classes.ctnCenter}>
-          <a href={props.cvLink} target="_blank" className={classes.linkInfo}>
-            {t("profile.viewCV")} <i className="fas fa-eye" />
-          </a>
-        </p>
+    <section className={classes.profileContainer}>
+      <BluredLoadImage
+        image={props.photoProfile}
+        bluredImg={props.bluredPhotoProfile}
+      />
+      <div className={classes.profileInfo}>
+        <h2 className={classes.profileTitle}>{props.name}</h2>
+
+        <div className={classes.profileDetails}>
+          <i className="fas fa-map-marker-alt">&nbsp;{props.address}</i>
+          <i className="fas fa-male">
+            &nbsp;{t("profile.age", { age: calculateAge(birthdate) })}
+          </i>
+          <i className="fas fa-suitcase">&nbsp;{props.jobTitle}</i>
+          <Nationality />
+
+          <div className={classes.cvLinkCtn}>
+            <a href={props.cvLink} target="_blank" className={classes.linkInfo}>
+              {t("profile.viewCV")} <i className="fas fa-eye" />
+            </a>
+          </div>
+        </div>
       </div>
     </section>
   );

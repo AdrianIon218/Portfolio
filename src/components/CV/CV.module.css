@@ -14,7 +14,7 @@
 
 .pageContainer {
   width: 100%;
-  padding-top: 6rem;
+  padding-top: 4rem;
 }
 
 .profileContainer {
@@ -156,8 +156,7 @@
 .myPhoto {
   display: inline-block;
   margin: 20px;
-  margin-top: 10px;
-  margin-bottom: 50px;
+  margin-bottom: 1.35rem;
   height: 20rem;
   width: 14rem;
   padding-right: 0;

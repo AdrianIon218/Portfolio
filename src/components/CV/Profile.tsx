@@ -25,11 +25,11 @@ export default function Profile(props: ProfileProps) {
 
   return (
     <section className={classes.profileContainer}>
-      <BluredLoadImage
-        image={props.photoProfile}
-        bluredImg={props.bluredPhotoProfile}
-      />
       <div className={classes.profileInfo}>
+        <BluredLoadImage
+          image={props.photoProfile}
+          bluredImg={props.bluredPhotoProfile}
+        />
         <h2 className={classes.profileTitle}>{props.name}</h2>
 
         <div className={classes.profileDetails}>

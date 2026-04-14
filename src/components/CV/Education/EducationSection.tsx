@@ -8,11 +8,13 @@ export default function EducationSection({
 }: IEducationSectionProps) {
   const { t } = useTranslation();
   const educationElements = arr.map((item, index) => {
-    return <Education key={index} {...item} />;
+    return (
+      <Education key={index} {...item} location={[45.7898057, 24.1464898]} />
+    );
   });
 
   return (
-    <section className={`${classes.eductionContainer}`}>
+    <section className={classes.eductionContainer}>
       <div className={classes.educationTitle}>
         <span>
           <i className="fas fa-graduation-cap" />

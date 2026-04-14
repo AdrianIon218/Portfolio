@@ -44,7 +44,13 @@ export interface IEducationProps {
   degree: string;
   fieldOfStudy: string;
   period: string;
+  location: [number, number];
   detailsLink?: string;
+}
+
+export interface ILocationMapProps {
+  position: [number, number];
+  title: string;
 }
 
 export interface IEducationSectionProps {

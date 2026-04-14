@@ -37,3 +37,16 @@ export type SkillListProps = {
   softwareSkills: SoftwareType[];
   languageSkills: LanguageType[];
 };
+
+export interface IEducationProps {
+  institute: string;
+  facultyName: string;
+  degree: string;
+  fieldOfStudy: string;
+  period: string;
+  detailsLink?: string;
+}
+
+export interface IEducationSectionProps {
+  educationArr: IEducationProps[];
+}

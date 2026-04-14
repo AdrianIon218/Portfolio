@@ -1,7 +1,7 @@
 import { createContext, useEffect, useState } from "react";
 import React from "react";
 import { supabase } from "../../supabse";
-import { EducationProps as EduationType } from "../CV/Education";
+import { EducationProps as EduationType } from "../CV/Education/Education";
 import { JobProps as JobType } from "../CV/Job";
 import {
   ContactType,

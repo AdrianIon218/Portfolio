@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { UserContext } from "../Context/UserContext";
 import Profile from "./Profile";
 import SkillSection from "./SkillSection";
-import EducationList from "./EducationList";
+import EducationSection from "./Education/EducationSection";
 import JobsList from "./JobsList";
 import classes from "./CV.module.css";
 import LoadingSpinner from "../Layout/LoadingSpinner";
@@ -23,10 +23,10 @@ export default function CV() {
   }
 
   return (
-    <div className={classes.pageContainer}>
+    <div className={classes.portfolioContainer}>
       {cvData && <Profile {...cvData} />}
 
-      {educationArr && <EducationList educationArr={educationArr} />}
+      {educationArr && <EducationSection educationArr={educationArr} />}
 
       {languageSkills && softwareSkills && (
         <SkillSection

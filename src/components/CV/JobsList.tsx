@@ -13,7 +13,7 @@ export default function JobsList({ jobsArr: arr }: JobsListProps) {
   });
 
   return (
-    <section className={`${classes.divColumn} ${classes.divSection}`}>
+    <section className={classes.divColumn}>
       <h2 className={classes.title}>
         <i className="fas fa-briefcase" />
         &nbsp;{t("work.title")}

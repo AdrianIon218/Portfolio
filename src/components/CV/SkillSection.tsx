@@ -8,7 +8,7 @@ export default function SkillSection(props: SkillListProps) {
   const { t } = useTranslation();
 
   return (
-    <section className={`${classes.divColumn} ${classes.divSection}`}>
+    <section className={classes.divColumn}>
       <h2 className={classes.title}>
         <i className="fas fa-award" />
         &nbsp;

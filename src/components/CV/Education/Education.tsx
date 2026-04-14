@@ -1,16 +1,8 @@
 import { useTranslation } from "react-i18next";
-import classes from "./CV.module.css";
+import classes from "../CV.module.css";
+import { IEducationProps } from "@/Interfaces/ProjectInterfaces";
 
-export type EducationProps = {
-  institute: string;
-  facultyName: string;
-  degree: string;
-  fieldOfStudy: string;
-  period: string;
-  detailsLink?: string;
-};
-
-export default function Education(props: EducationProps) {
+export default function Education(props: IEducationProps) {
   const { t } = useTranslation();
 
   return (

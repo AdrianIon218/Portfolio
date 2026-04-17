@@ -4,13 +4,11 @@ import { useTranslation } from "react-i18next";
 import { IEducationSectionProps } from "@/Interfaces/ProjectInterfaces";
 
 export default function EducationSection({
-  educationArr: arr,
+  educationArr,
 }: IEducationSectionProps) {
   const { t } = useTranslation();
-  const educationElements = arr.map((item, index) => {
-    return (
-      <Education key={index} {...item} location={[45.7898057, 24.1464898]} />
-    );
+  const educationElements = educationArr.map((item, index) => {
+    return <Education key={index} {...item} />;
   });
 
   return (
@@ -22,7 +20,7 @@ export default function EducationSection({
         <h2>{t("education.title")}</h2>
       </div>
 
-      {educationElements}
+      <div className={classes.educationItemsCtn}>{educationElements}</div>
     </section>
   );
 }

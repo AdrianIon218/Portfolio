@@ -50,6 +50,12 @@
   margin: 0;
 }
 
+.educationItemsCtn {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
 .educationItem {
   display: flex;
   flex-direction: column;
@@ -65,4 +71,12 @@
   width: 30vw;
   height: 40vh;
   align-self: right;
+}
+
+@media (max-width: 1000px) {
+  .mapContainer {
+    width: 100%;
+    height: 30vh;
+    align-self: center;
+  }
 }

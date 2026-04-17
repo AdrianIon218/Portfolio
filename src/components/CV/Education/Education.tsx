@@ -44,9 +44,11 @@ export default function Education(props: IEducationProps) {
         )}
       </div>
 
-      <div className={eduClasses.mapContainer}>
-        <LocationMap position={props.location} title={props.institute} />
-      </div>
+      {props.location && (
+        <div className={eduClasses.mapContainer}>
+          <LocationMap position={props.location} title={props.institute} />
+        </div>
+      )}
     </div>
   );
 }

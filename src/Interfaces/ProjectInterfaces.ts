@@ -44,7 +44,7 @@ export interface IEducationProps {
   degree: string;
   fieldOfStudy: string;
   period: string;
-  location: [number, number];
+  location: [number, number] | null;
   detailsLink?: string;
 }
 

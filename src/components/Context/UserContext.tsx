@@ -1,7 +1,7 @@
 import { createContext, useEffect, useState } from "react";
 import React from "react";
 import { supabase } from "../../supabse";
-import { EducationProps as EduationType } from "../CV/Education/Education";
+import { IEducationProps as EduationType } from "@interfaces/ProjectInterfaces";
 import { JobProps as JobType } from "../CV/Job";
 import {
   ContactType,
@@ -138,6 +138,7 @@ export function UserContextProvider(props: React.PropsWithChildren) {
               period: item.period,
               detailsLink: item.details,
               lang: item.lang,
+              location: item.location as [number, number],
             }) as EduationType & LangProp,
         );
 

@@ -18,7 +18,7 @@
   gap: 2rem;
   margin-top: 4rem;
   background-color: rgba(255, 247, 247, 0.48);
-  border-radius: 1.75rem;
+  border-radius: 1.25rem;
   border: 1px solid rgba(0, 0, 0, 0.15);
   box-shadow: rgba(180, 180, 186, 0.2) 0px 7px 29px 0px;
   overflow: hidden;
@@ -37,7 +37,7 @@
       rgba(11, 113, 113, 0.75) 0%,
       rgba(255, 255, 255, 0.9) 100%
     ),
-    url(/public/assets/tech_background.jpg);
+    url(/assets/tech_background.jpg);
   background-size: cover;
   clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
 }

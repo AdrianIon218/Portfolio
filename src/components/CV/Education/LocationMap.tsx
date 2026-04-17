@@ -6,7 +6,7 @@ export default function LocationMap({ position, title }: ILocationMapProps) {
   return (
     <MapContainer
       center={position}
-      zoom={30}
+      zoom={33}
       minZoom={16}
       style={{ height: "100%", width: "100%" }}
     >

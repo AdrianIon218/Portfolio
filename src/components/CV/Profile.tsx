@@ -2,6 +2,7 @@ import classes from "./CV.module.css";
 import Nationality from "./Nationality";
 import BluredLoadImage from "../Layout/BluredLoadImage";
 import { useTranslation } from "react-i18next";
+import LinkButton from "../CustomedElements/LinkButton";
 
 type ProfileProps = {
   birthdate: string;
@@ -41,9 +42,7 @@ export default function Profile(props: ProfileProps) {
           <Nationality />
 
           <div className={classes.cvLinkCtn}>
-            <a href={props.cvLink} target="_blank" className={classes.linkInfo}>
-              {t("profile.viewCV")} <i className="fas fa-eye" />
-            </a>
+            <LinkButton href={props.cvLink}>{t("profile.viewCV")}</LinkButton>
           </div>
         </div>
       </div>

@@ -1,9 +1,9 @@
 import { useMemo } from "react";
-import classes from "./CV.module.css";
+import classes from "./Skill.module.css";
 import { useTranslation } from "react-i18next";
-import { SkillListProps } from "@/Interfaces/ProjectInterfaces";
+import { ISkillListProps } from "@/Interfaces/ProjectInterfaces";
 
-export default function Skill(props: SkillListProps) {
+export default function Skill(props: ISkillListProps) {
   const { t } = useTranslation();
 
   const softwareSkillElements = useMemo(() => {
@@ -21,7 +21,7 @@ export default function Skill(props: SkillListProps) {
   }, [props.languageSkills]);
 
   return (
-    <>
+    <div>
       <div>
         <h3>
           <i className="fas fa-laptop-code" />
@@ -36,6 +36,6 @@ export default function Skill(props: SkillListProps) {
         </h3>
         <ul>{languageSillElements}</ul>
       </div>
-    </>
+    </div>
   );
 }

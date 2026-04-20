@@ -1,7 +1,7 @@
 import { Canvas, useLoader } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import * as THREE from "three";
-import styles from "./Globe.module.css";
+import classes from "./Globe.module.css";
 import { useState } from "react";
 
 function GlobeContainer() {
@@ -9,8 +9,8 @@ function GlobeContainer() {
   const [pointertType, setPointerType] = useState<"auto" | "grab">("auto");
 
   return (
-    <div className={styles.centered}>
-      <div className={styles.canvasContainer}>
+    <div className={classes.centered}>
+      <div className={classes.canvasContainer}>
         <Canvas
           camera={{ position: [3, 3, 5], fov: 50 }}
           style={{
@@ -22,7 +22,7 @@ function GlobeContainer() {
             onPointerDown={() => setPointerType("grab")}
             onPointerUp={() => setPointerType("auto")}
           >
-            <sphereGeometry args={[2.5, 40, 40]} />
+            <sphereGeometry args={[2.5, 70, 70]} />
             <meshBasicMaterial map={texture} />
           </mesh>
           <OrbitControls autoRotate enableZoom={false} enablePan={false} />

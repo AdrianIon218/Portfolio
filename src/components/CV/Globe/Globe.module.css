@@ -5,8 +5,8 @@
 
 .canvasContainer {
   position: relative;
-  min-width: 40vw;
-  height: 30vh;
+  min-width: 25vw;
+  height: 15vh;
   border-radius: 25%;
   overflow: hidden;
 }

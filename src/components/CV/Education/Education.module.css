@@ -9,7 +9,7 @@
     rgba(255, 255, 255, 0.9) 0%,
     rgba(11, 113, 113, 0.45) 100%
   );
-  border: 0.25rem currentColor dashed;
+  border: 0.2rem currentColor solid;
   box-shadow: rgba(180, 180, 186, 0.2) 0px 7px 29px 0px;
   margin-top: 7rem;
   margin-left: 3.5rem;

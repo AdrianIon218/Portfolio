@@ -1,9 +1,9 @@
 import { useContext } from "react";
 import { UserContext } from "../Context/UserContext";
 import Profile from "./Profile";
-import SkillSection from "./SkillSection";
+import SkillSection from "./Skills/SkillSection";
 import EducationSection from "./Education/EducationSection";
-import JobsList from "./JobsList";
+import JobSection from "./Job/JobSection";
 import classes from "./CV.module.css";
 import LoadingSpinner from "../Layout/LoadingSpinner";
 
@@ -35,7 +35,7 @@ export default function CV() {
         />
       )}
 
-      {jobsArr && <JobsList jobsArr={jobsArr} />}
+      {jobsArr && <JobSection jobsArr={jobsArr} />}
     </div>
   );
 }

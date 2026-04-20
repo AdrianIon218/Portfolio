@@ -33,7 +33,7 @@ export type LanguageType = {
   level: string;
 };
 
-export type SkillListProps = {
+export type ISkillListProps = {
   softwareSkills: SoftwareType[];
   languageSkills: LanguageType[];
 };

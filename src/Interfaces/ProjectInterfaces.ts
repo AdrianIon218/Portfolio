@@ -56,3 +56,18 @@ export interface ILocationMapProps {
 export interface IEducationSectionProps {
   educationArr: IEducationProps[];
 }
+
+export interface IJobProps {
+  id: number;
+  position: string;
+  startDate: string;
+  endDate: string;
+  companyName: string;
+  location: string;
+  description: string;
+  order: number;
+}
+
+export interface IJobSectionProps {
+  jobsArr: IJobProps[];
+}

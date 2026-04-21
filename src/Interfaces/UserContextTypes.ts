@@ -1,6 +1,9 @@
-import { EducationProps as EduationType } from "../components/CV/Education/Education";
-import { JobProps as JobType } from "../components/CV/Job";
-import { LanguageType, SoftwareType } from "./ProjectInterfaces";
+import {
+  IEducationProps,
+  IJobProps,
+  LanguageType,
+  SoftwareType,
+} from "./ProjectInterfaces";
 
 export type ProfileData = {
   name: string;
@@ -86,8 +89,8 @@ export type UserCtxType = {
   footerData: false | FooterDataType;
   contactArr: false | ContactType[];
   projectsArr: false | ProjectType[];
-  educationArr: false | EduationType[];
+  educationArr: false | IEducationProps[];
   softwareSkills: false | SoftwareType[];
   languageSkills: false | LanguageType[];
-  jobsArr: false | JobType[];
+  jobsArr: false | IJobProps[];
 };

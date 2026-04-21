@@ -1,12 +1,9 @@
 import { useTranslation } from "react-i18next";
 import classes from "./Job.module.css";
-import Job, { JobProps as JobData } from "../Job";
+import Job from "./Job";
+import { IJobSectionProps } from "@/Interfaces/ProjectInterfaces";
 
-type JobsListProps = {
-  jobsArr: JobData[];
-};
-
-export default function JobSection({ jobsArr: arr }: JobsListProps) {
+export default function JobSection({ jobsArr: arr }: IJobSectionProps) {
   const { t } = useTranslation();
   const jobsElements = arr.map((job, index) => {
     return <Job key={`job-${index}`} {...job} />;

@@ -6,6 +6,7 @@ import EducationSection from "./Education/EducationSection";
 import JobSection from "./Job/JobSection";
 import classes from "./CV.module.css";
 import LoadingSpinner from "../Layout/LoadingSpinner";
+import GlobeSection from "./Globe/GlobeSection";
 
 export default function CV() {
   const userCtx = useContext(UserContext);
@@ -34,6 +35,8 @@ export default function CV() {
           softwareSkills={softwareSkills}
         />
       )}
+
+      <GlobeSection />
 
       {jobsArr && <JobSection jobsArr={jobsArr} />}
     </div>

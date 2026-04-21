@@ -29,10 +29,10 @@
   background:
     linear-gradient(
       to bottom left,
-      rgba(11, 138, 138, 0.35) 0%,
-      rgba(13, 167, 167, 0.35) 40%,
-      rgba(255, 255, 255, 0.85) 40%,
-      rgba(255, 255, 255, 0.85) 100%
+      rgba(212, 220, 220, 0.45) 0%,
+      rgba(212, 220, 220, 0.45) 40%,
+      rgba(255, 255, 255, 0.89) 40%,
+      rgba(255, 255, 255, 0.89) 100%
     ),
     url("assets/backgroundSkills.jpg");
   background-position: center center;

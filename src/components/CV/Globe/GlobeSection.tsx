@@ -4,18 +4,17 @@ import * as THREE from "three";
 import classes from "./Globe.module.css";
 import { useState } from "react";
 
-function GlobeContainer() {
+function GlobeSection() {
   const texture = useLoader(THREE.TextureLoader, "/earth_texture.jpg");
   const [pointertType, setPointerType] = useState<"auto" | "grab">("auto");
 
   return (
-    <div className={classes.centered}>
+    <div className={classes.globeSection}>
       <div className={classes.canvasContainer}>
         <Canvas
           camera={{ position: [3, 3, 5], fov: 50 }}
-          style={{
-            cursor: pointertType,
-          }}
+          style={{ cursor: pointertType }}
+          className={classes.canvas}
         >
           <mesh
             rotateX={-50}
@@ -32,4 +31,4 @@ function GlobeContainer() {
   );
 }
 
-export default GlobeContainer;
+export default GlobeSection;

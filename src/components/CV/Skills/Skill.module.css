@@ -34,7 +34,7 @@
       rgba(255, 255, 255, 0.93) 40%,
       rgba(255, 255, 255, 0.93) 100%
     ),
-    url("assets/backgroundSkills.jpg");
+    url("/assets/backgroundSkills.jpg");
   background-position: center center;
   background-size: cover;
   min-width: 60vw;

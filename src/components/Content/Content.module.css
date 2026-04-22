@@ -19,9 +19,3 @@
   color: rgb(11, 113, 113);
   margin-bottom: 10vh;
 }
-
-@media only screen and (max-width: 600px) {
-  .main {
-    max-width: 90vw;
-  }
-}

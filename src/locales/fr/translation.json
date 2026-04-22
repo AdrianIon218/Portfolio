@@ -36,7 +36,8 @@
   },
   "skills": {
     "title": "Les compétences",
-    "languages": "Langues:"
+    "software": "Software",
+    "languages": "Langues"
   },
   "work": {
     "title": "L'expérience professionnelle",

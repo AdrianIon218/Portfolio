@@ -3,12 +3,64 @@
   font-weight: 600;
 }
 
+.profileTitle {
+  font-size: 1.65rem;
+  font-weight: 700;
+}
+
 .center {
   text-align: center;
 }
 
-.pageContainer {
-  width: 100%;
+.portfolioContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  margin-top: 4rem;
+  background-color: rgba(255, 247, 247, 0.48);
+  border-radius: 1.25rem;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  box-shadow:
+    rgba(0, 0, 0, 0.16) 0px 3px 6px,
+    rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  overflow: hidden;
+}
+
+.profileContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding-bottom: 4rem;
+  padding: 5rem 1rem 8rem;
+  background-image:
+    linear-gradient(
+      to bottom,
+      rgba(11, 113, 113, 0.75) 0%,
+      rgba(255, 255, 255, 0.9) 100%
+    ),
+    url(/assets/tech_background.jpg);
+  background-size: cover;
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
+}
+
+.profileInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profileDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  letter-spacing: 1px;
+  align-items: center;
+  font-weight: 700;
+}
+
+.cvLinkCtn {
+  margin-top: 1rem;
 }
 
 .elementsAligned {
@@ -48,29 +100,8 @@
   font-weight: 700;
 }
 
-.no-margin-y {
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
-
 .no-margin-top {
   margin-top: 0px;
-}
-
-.softSkillsCtn {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(19rem, 1fr));
-  grid-row: max-content;
-  list-style-type: disc;
-  row-gap: 0.2rem;
-  column-gap: 5rem;
-}
-
-@media only screen and (max-width: 500px) {
-  .softSkillsCtn {
-    grid-template-columns: 1fr;
-    column-gap: 0px;
-  }
 }
 
 .description {
@@ -80,16 +111,13 @@
 }
 
 .linkInfo {
-  display: flex;
-  align-items: baseline;
-  justify-content: center;
-  gap: 3px;
   color: inherit;
   text-decoration: none;
   width: max-content;
   border: 3px rgb(16, 141, 141) solid;
-  padding: 4px 10px;
-  border-radius: 1rem;
+  padding: 4px 8px;
+  padding-top: 2px;
+  border-radius: 0.85rem;
   transition: all 0.5s;
   user-select: none;
 }
@@ -126,23 +154,25 @@
 .myPhoto {
   display: inline-block;
   margin: 20px;
-  margin-top: 10px;
-  margin-bottom: 50px;
+  margin-bottom: 1.35rem;
   height: 20rem;
   width: 14rem;
   padding-right: 0;
   border: 1px solid rgba(0, 0, 0, 0.15);
-  border-radius: 15%;
-  background-color: rgba(75, 162, 162, 0.1);
-  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+  border-radius: 5.5%;
+  background-color: rgba(75, 162, 162, 0.45);
+  box-shadow:
+    rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
     rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
-    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
-    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
-    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset,
+    rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px,
+    rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px,
+    rgba(0, 0, 0, 0.09) 0px 32px 16px;
   filter: drop-shadow(2px 3px 7px black);
 }
 
-.notionalityCtn {
-  margin-top: 0.5rem;
-  margin-bottom: 0.7rem;
+.noMargin {
+  margin: 0;
 }

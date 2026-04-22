@@ -1,9 +1,21 @@
 import classes from "./LoadingSpinner.module.css";
 
-function LoadingSpinner({ cls }: { cls?: string }) {
-  const classesStr = cls ? `${classes.spinner} ${cls}` : classes.spinner;
+export type LoadingSpinnerVariant = "line" | "circle";
 
-  return <div className={classesStr} />;
+function LoadingSpinner({
+  variant = "line",
+}: {
+  variant?: LoadingSpinnerVariant;
+}) {
+  return (
+    <div className={classes.loaderContainer}>
+      <div
+        className={
+          variant === "circle" ? classes.circleSpinner : classes.lineLoader
+        }
+      />
+    </div>
+  );
 }
 
 export default LoadingSpinner;

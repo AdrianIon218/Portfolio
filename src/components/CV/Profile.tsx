@@ -2,6 +2,7 @@ import classes from "./CV.module.css";
 import Nationality from "./Nationality";
 import BluredLoadImage from "../Layout/BluredLoadImage";
 import { useTranslation } from "react-i18next";
+import LinkButton from "../CustomedElements/LinkButton";
 
 type ProfileProps = {
   birthdate: string;
@@ -24,26 +25,26 @@ export default function Profile(props: ProfileProps) {
   const { birthdate } = props;
 
   return (
-    <section>
-      <h2 className={classes.title}>{props.name}</h2>
-      <div className={classes.center}>
+    <section className={classes.profileContainer}>
+      <div className={classes.profileInfo}>
         <BluredLoadImage
           image={props.photoProfile}
           bluredImg={props.bluredPhotoProfile}
         />
-      </div>
-      <div className={`${classes.center} ${classes.divColumn}`}>
-        <i className="fas fa-map-marker-alt">&nbsp;{props.address}</i>
-        <i className="fas fa-male">
-          &nbsp;{t("profile.age", { age: calculateAge(birthdate) })}
-        </i>
-        <i className="fas fa-suitcase">&nbsp;{props.jobTitle}</i>
-        <Nationality isEuropean={props.isEuropean} />
-        <p className={classes.ctnCenter}>
-          <a href={props.cvLink} target="_blank" className={classes.linkInfo}>
-            {t("profile.viewCV")} <i className="fas fa-eye" />
-          </a>
-        </p>
+        <h2 className={classes.profileTitle}>{props.name}</h2>
+
+        <div className={classes.profileDetails}>
+          <i className="fas fa-map-marker-alt">&nbsp;{props.address}</i>
+          <i className="fas fa-male">
+            &nbsp;{t("profile.age", { age: calculateAge(birthdate) })}
+          </i>
+          <i className="fas fa-suitcase">&nbsp;{props.jobTitle}</i>
+          <Nationality />
+
+          <div className={classes.cvLinkCtn}>
+            <LinkButton href={props.cvLink}>{t("profile.viewCV")}</LinkButton>
+          </div>
+        </div>
       </div>
     </section>
   );

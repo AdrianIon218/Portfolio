@@ -36,7 +36,8 @@
   },
   "skills": {
     "title": "Aptitudini",
-    "languages": "Limbi străine:"
+    "software": "Software",
+    "languages": "Limbi străine"
   },
   "work": {
     "title": "Experiență profesională",

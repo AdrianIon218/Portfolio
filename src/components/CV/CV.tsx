@@ -1,11 +1,12 @@
 import { useContext } from "react";
 import { UserContext } from "../Context/UserContext";
 import Profile from "./Profile";
-import SkillSection from "./SkillSection";
-import EducationList from "./EducationList";
-import JobsList from "./JobsList";
+import SkillSection from "./Skills/SkillSection";
+import EducationSection from "./Education/EducationSection";
+import JobSection from "./Job/JobSection";
 import classes from "./CV.module.css";
 import LoadingSpinner from "../Layout/LoadingSpinner";
+import GlobeSection from "./Globe/GlobeSection";
 
 export default function CV() {
   const userCtx = useContext(UserContext);
@@ -23,10 +24,10 @@ export default function CV() {
   }
 
   return (
-    <div className={classes.pageContainer}>
+    <div className={classes.portfolioContainer}>
       {cvData && <Profile {...cvData} />}
 
-      {educationArr && <EducationList educationArr={educationArr} />}
+      {educationArr && <EducationSection educationArr={educationArr} />}
 
       {languageSkills && softwareSkills && (
         <SkillSection
@@ -35,7 +36,9 @@ export default function CV() {
         />
       )}
 
-      {jobsArr && <JobsList jobsArr={jobsArr} />}
+      <GlobeSection />
+
+      {jobsArr && <JobSection jobsArr={jobsArr} />}
     </div>
   );
 }

@@ -4,8 +4,9 @@ import Content from "../Content/Content";
 import { UserContextProvider } from "../Context/UserContext";
 import toast, { ToastBar, Toaster } from "react-hot-toast";
 import toastCls from "./Toast.module.css";
+import { PropsWithChildren } from "react";
 
-export default function Layout(props: React.PropsWithChildren) {
+export default function Layout({ children }: PropsWithChildren) {
   return (
     <UserContextProvider>
       <NavComp />
@@ -53,7 +54,7 @@ export default function Layout(props: React.PropsWithChildren) {
           </ToastBar>
         )}
       </Toaster>
-      <Content>{props.children}</Content>
+      <Content>{children}</Content>
       <Footer />
     </UserContextProvider>
   );

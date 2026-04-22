@@ -1,8 +1,10 @@
 import { createContext, useEffect, useState } from "react";
 import React from "react";
 import { supabase } from "../../supabse";
-import { EducationProps as EduationType } from "../CV/Education";
-import { JobProps as JobType } from "../CV/Job";
+import {
+  IEducationProps as EduationType,
+  IJobProps,
+} from "@interfaces/ProjectInterfaces";
 import {
   ContactType,
   PhoneContact,
@@ -37,7 +39,7 @@ export function UserContextProvider(props: React.PropsWithChildren) {
         profiles: (ProfileData & LangProp)[];
         contacts: ContactType[];
         education: (EduationType & LangProp)[];
-        jobs: (JobType & LangProp)[];
+        jobs: (IJobProps & LangProp)[];
         softwareSkills: SoftwareType[];
         languageSkills: (LanguageType & LangProp)[];
         projects: (ProjectType & LangProp)[];
@@ -138,10 +140,11 @@ export function UserContextProvider(props: React.PropsWithChildren) {
               period: item.period,
               detailsLink: item.details,
               lang: item.lang,
+              location: item.location as [number, number],
             }) as EduationType & LangProp,
         );
 
-        const jobsArr = jobsData as (JobType & LangProp)[];
+        const jobsArr = jobsData as (IJobProps & LangProp)[];
         jobsArr.sort((job1, job2) => job1.order - job2.order);
 
         const allLanguageSkills = languageSkills as (LanguageType & LangProp)[];
@@ -192,7 +195,7 @@ export function UserContextProvider(props: React.PropsWithChildren) {
 
       currentContext.jobsArr = dataContainer?.jobs.filter(
         (item) => item.lang === Lang,
-      ) as JobType[];
+      ) as IJobProps[];
 
       currentContext.languageSkills = dataContainer?.languageSkills.filter(
         (item) => item.lang === Lang,

@@ -1,29 +1,20 @@
 import { useTranslation } from "react-i18next";
-import classes from "./CV.module.css";
-import useDateFormated from "./useDateFormated";
+import classes from "./Job.module.css";
+import useDateFormated from "../useDateFormated";
+import { IJobProps } from "@/Interfaces/ProjectInterfaces";
 
-export type JobProps = {
-  id: number;
-  position: string;
-  startDate: string;
-  endDate: string;
-  companyName: string;
-  location: string;
-  description: string;
-  order: number;
-};
-
-export default function Job(props: JobProps) {
+export default function Job(props: IJobProps) {
   const { t } = useTranslation();
   const startDateFormated = useDateFormated(props.startDate);
   const endDateFormated = useDateFormated(props.endDate);
 
   return (
-    <div>
-      <h3 className={classes.elementsAligned}>
+    <div className={classes.jobItem}>
+      <h3 className={classes.jobTitle}>
         <i className="fas fa-business-time" />
         {props.position}
       </h3>
+
       <ul>
         <li>
           {t("work.company")} {props.companyName}

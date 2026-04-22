@@ -33,7 +33,41 @@ export type LanguageType = {
   level: string;
 };
 
-export type SkillListProps = {
+export type ISkillListProps = {
   softwareSkills: SoftwareType[];
   languageSkills: LanguageType[];
 };
+
+export interface IEducationProps {
+  institute: string;
+  facultyName: string;
+  degree: string;
+  fieldOfStudy: string;
+  period: string;
+  location: [number, number] | null;
+  detailsLink?: string;
+}
+
+export interface ILocationMapProps {
+  position: [number, number];
+  title: string;
+}
+
+export interface IEducationSectionProps {
+  educationArr: IEducationProps[];
+}
+
+export interface IJobProps {
+  id: number;
+  position: string;
+  startDate: string;
+  endDate: string;
+  companyName: string;
+  location: string;
+  description: string;
+  order: number;
+}
+
+export interface IJobSectionProps {
+  jobsArr: IJobProps[];
+}

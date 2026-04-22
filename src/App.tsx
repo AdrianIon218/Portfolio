@@ -18,7 +18,7 @@ function App() {
         window.addEventListener("storage", listener);
         return () => window.removeEventListener("storage", listener);
       },
-      () => Cookies.get("@activeLanguage")
+      () => Cookies.get("@activeLanguage"),
     ) || i18n.language;
 
   useEffect(() => {

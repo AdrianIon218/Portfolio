@@ -1,6 +1,7 @@
 .main {
-  display: grid;
-  grid-template-columns: 100px 1fr 100px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
   background: linear-gradient(
     to right bottom,
     var(--color-blue-1) 30%,
@@ -12,32 +13,15 @@
 }
 
 .content {
-  border-left: 4px rgb(19, 168, 168) solid;
-  border-right: 4px rgb(19, 168, 168) solid;
+  max-width: 85vw;
   min-height: 80vh;
-  height: auto;
-  padding: 10px;
+  padding: 0.625rem;
   color: rgb(11, 113, 113);
-  padding-bottom: 10vh;
-}
-
-/*
-Because of module CSS .backdrop class mutates 
-.backdrop => ._backdrop_unic_id
-*/
-@media only screen and (pointer: fine) {
-  /*
-  Firefox doesn't supports scrollbar styles
-  */
-  @supports selector(body::-webkit-scrollbar) {
-    body:has([class*="backdrop"]) .main {
-      grid-template-columns: 100px 1fr 115px;
-    }
-  }
+  margin-bottom: 10vh;
 }
 
 @media only screen and (max-width: 600px) {
   .main {
-    grid-template-columns: 30px 1fr 30px;
+    max-width: 90vw;
   }
 }

@@ -6,7 +6,7 @@ function QRCodeImg({ src, title }: { src: string; title: string }) {
   const [loaded, setLoaded] = useState(false);
   return (
     <div className={classes.qrCodeCtn}>
-      {loaded ? null : <LoadingSpinner cls={classes.loadingQRCtn} />}
+      {loaded ? null : <LoadingSpinner variant="circle" />}
 
       <img
         style={loaded ? {} : { display: "none" }}

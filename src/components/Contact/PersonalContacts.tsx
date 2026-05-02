@@ -2,7 +2,7 @@ import classes from "./Contact.module.css";
 import PhoneNumber from "./PhoneNumber";
 import Email from "./Email";
 import LinkContact from "./LinkContact";
-import React, { useMemo } from "react";
+import { useMemo } from "react";
 import { ContactType } from "@interfaces/UserContextTypes";
 import { useTranslation } from "react-i18next";
 
@@ -37,13 +37,13 @@ export default function PersonalContacts(props: { contacts: ContactType[] }) {
             return null;
         }
       }),
-    [props.contacts]
+    [props.contacts],
   );
 
   return (
-    <React.Fragment>
+    <div className={classes.personalContactsContainer}>
       <h2 className={classes.contactsHeader}>{t("contacts.title")}</h2>
       <div className={classes.personalContact}>{contactsElements}</div>
-    </React.Fragment>
+    </div>
   );
 }

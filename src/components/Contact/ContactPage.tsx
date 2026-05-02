@@ -13,7 +13,7 @@ export default function ContactPage() {
   }
 
   return (
-    <div className={classes.skillsContainer}>
+    <div className={classes.contactContainer}>
       <PersonalContacts contacts={contactArr} />
       <MessageForm />
     </div>

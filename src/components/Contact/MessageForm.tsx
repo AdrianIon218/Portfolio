@@ -52,7 +52,7 @@ export default function MessageForm() {
 
   return (
     <section>
-      <h2>{t("contacts.contactsTitle") as string}</h2>
+      <h2 className={classes.formHeader}>{t("contacts.contactsTitle")}</h2>
       <form onSubmit={handleSubmit(onSubmit)} noValidate>
         <ul className={classes.noBulletList}>
           <li>

@@ -1,17 +1,12 @@
-import classes from "./Projects.module.css";
 import { useId } from "react";
+import { useTranslation } from "react-i18next";
 import { ICardProps } from "@/Interfaces/ProjectInterfaces";
+import classes from "./Projects.module.css";
+import GradientButton from "../CustomedElements/GradientButton";
 
 export default function Card(props: ICardProps) {
+  const { t } = useTranslation();
   const key = useId();
-
-  function onCardClick() {
-    if (props.content) {
-      props.onClick();
-    } else {
-      window.open(props.porjectLink, "_blank");
-    }
-  }
 
   const categories = props.categories.map((item, index) => {
     return item.photo.length > 0 ? (
@@ -29,20 +24,21 @@ export default function Card(props: ICardProps) {
   });
 
   return (
-    <div className={classes.cardElement} onClick={onCardClick}>
-      <div className={classes.rowContainer}>{categories}</div>
-      <div className={classes.card}>
+    <div className={classes.card}>
+      <div className={`${classes.cardSide} ${classes.cardSideFront}`}>
         <img src={props.photoLink} alt={props.title} onLoad={props.onLoad} />
         <label>{props.title}</label>
       </div>
-      <span
-        className={classes.tooltiptext}
-        onClick={(event) => {
-          event.stopPropagation();
-        }}
-      >
-        {props.description}
-      </span>
+
+      <div className={`${classes.cardSide} ${classes.cardSideBack}`}>
+        <label className={classes.cardDescription}>{props.description}</label>
+        <GradientButton
+          onClick={props.onClick}
+          disabled={!props.content && !props.porjectLink}
+        >
+          {t("project.view")}
+        </GradientButton>
+      </div>
     </div>
   );
 }

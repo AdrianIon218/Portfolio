@@ -171,16 +171,16 @@ body:has(.backdrop) {
   body:has(.backdrop) nav {
     padding-right: 20px;
   }
+
+  body:has(.backdrop) .cardsContainer {
+    padding-right: 1rem;
+  }
 }
 
 @media only screen and (max-width: 450px) {
   @supports selector(body::-webkit-scrollbar) {
     body:has(.backdrop) nav {
       padding-right: 3rem;
-    }
-
-    body:has(.backdrop) .cardsContainer {
-      margin-right: 40rem;
     }
   }
 }

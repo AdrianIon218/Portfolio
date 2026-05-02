@@ -1,23 +1,31 @@
 import { useId, useMemo, useRef } from "react";
 import classes from "./Projects.module.css";
 import RepoLink from "./RepoLink";
-import { ContentType } from "@interfaces/UserContextTypes";
 import { useTranslation } from "react-i18next";
 import QRCodeImg from "./QRCodeImg";
+import { IProjectPanelProps } from "@/Interfaces/ProjectInterfaces";
 
-type ProjectPanelProps = {
-  onClosePanel: () => void;
-  content: ContentType[];
-  title: string;
-  link: string;
-  linkBtnLabel: string;
-};
-
-function ProjectPanel(props: ProjectPanelProps) {
+function ProjectPanel(props: IProjectPanelProps) {
   const { t } = useTranslation();
   const isNotThePortfolioPage = props.title !== "Portfolio";
   const panelRef = useRef<HTMLDivElement>(null);
   const key = useId();
+
+  const categories = props.categories.reduce((acc, item, index) => {
+    return item.photo.length > 0
+      ? [
+          ...acc,
+          <div className={classes.categoryWrapper} key={`${key}-${index}`}>
+            <img
+              alt={item.name}
+              className={classes.categoryImage}
+              src={item.photo}
+              title={item.name}
+            />
+          </div>,
+        ]
+      : acc;
+  }, [] as JSX.Element[]);
 
   const closePresentation = () => {
     panelRef.current?.classList.add(classes.closePanel);
@@ -77,6 +85,7 @@ function ProjectPanel(props: ProjectPanelProps) {
           onClick={(e) => e.stopPropagation()}
         >
           <h2>{props.title}</h2>
+          <div className={classes.categoriesContainer}>{categories}</div>
           {isNotThePortfolioPage && (
             <button onClick={openCardLink} className={classes.btnLink}>
               {props.linkBtnLabel}

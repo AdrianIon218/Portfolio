@@ -1,0 +1,47 @@
+.gradientBtn {
+  background: linear-gradient(
+    to bottom right,
+    rgb(3, 114, 114),
+    rgb(161, 218, 218)
+  );
+  border: 0;
+  border-radius: 12px;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.1rem;
+  font-weight: 500;
+  line-height: 2.5;
+  outline: transparent;
+  padding: 0 0.75rem;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.4s ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+}
+
+.gradientBtn:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.gradientBtn:not([disabled]):focus {
+  box-shadow:
+    0 0 0.25rem rgba(0, 0, 0, 0.5),
+    -0.125rem -0.125rem 1rem rgb(3, 114, 114),
+    0.125rem 0.125rem 1rem rgb(161, 218, 218);
+
+  transform: translateY(-0.35rem);
+}
+
+.gradientBtn:not([disabled]):hover {
+  box-shadow:
+    0 0 0.25rem rgba(0, 0, 0, 0.5),
+    -0.125rem -0.125rem 1rem rgb(3, 114, 114),
+    0.125rem 0.125rem 1rem rgb(161, 218, 218);
+
+  transform: translateY(-0.35rem);
+}

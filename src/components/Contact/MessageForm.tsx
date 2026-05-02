@@ -6,6 +6,7 @@ import { supabase } from "../../supabse";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { contactFormSchema } from "./validation";
+import GradientButton from "../CustomedElements/GradientButton";
 
 export default function MessageForm() {
   const { t } = useTranslation();
@@ -101,9 +102,9 @@ export default function MessageForm() {
             ></textarea>
           </li>
           <li>
-            <button className={classes.submitBtn} disabled={disableSubmit}>
+            <GradientButton disabled={disableSubmit} type="submit">
               {t("contacts.send")}
-            </button>
+            </GradientButton>
           </li>
         </ul>
       </form>

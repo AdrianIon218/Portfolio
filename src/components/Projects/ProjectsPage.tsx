@@ -10,7 +10,7 @@ export default function ProjectsPage() {
   const { projectsArr } = useContext(UserContext);
   const [isFirstCardLoaded, setIsCardLoaded] = useState(false);
   const [currentProject, setCurrentProject] = useState<IProjectData | null>(
-    null
+    null,
   );
 
   if (!projectsArr) {
@@ -22,7 +22,7 @@ export default function ProjectsPage() {
       <Card
         key={index}
         photoLink={project.photo}
-        porjectLink={project.link}
+        projectLink={project.link}
         categories={project.categories}
         description={project.description}
         title={project.title}
@@ -34,7 +34,7 @@ export default function ProjectsPage() {
         onClick={() =>
           setCurrentProject({
             photoLink: project.photo,
-            porjectLink: project.link,
+            projectLink: project.link,
             linkBtnLabel: project.linkBtnLabel,
             categories: project.categories,
             description: project.description,
@@ -54,8 +54,9 @@ export default function ProjectsPage() {
           onClosePanel={() => setCurrentProject(null)}
           content={currentProject.content}
           title={currentProject.title}
-          link={currentProject.porjectLink}
+          link={currentProject.projectLink}
           linkBtnLabel={currentProject.linkBtnLabel}
+          categories={currentProject.categories}
         />
       )}
       <section

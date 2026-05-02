@@ -13,6 +13,12 @@
   --color-gray-light-2: rgb(110, 109, 109);
 }
 
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family:

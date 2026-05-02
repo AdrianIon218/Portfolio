@@ -2,7 +2,7 @@ import { CategoryIcon, ContentType } from "./UserContextTypes";
 
 export interface IProjectData {
   photoLink: string;
-  porjectLink: string;
+  projectLink: string;
   linkBtnLabel: string;
   categories: CategoryIcon[];
   description: string;
@@ -12,7 +12,7 @@ export interface IProjectData {
 
 export interface ICardProps {
   photoLink: string;
-  porjectLink: string;
+  projectLink: string;
   linkBtnLabel: string;
   categories: CategoryIcon[];
   description: string;
@@ -70,4 +70,13 @@ export interface IJobProps {
 
 export interface IJobSectionProps {
   jobsArr: IJobProps[];
+}
+
+export interface IProjectPanelProps {
+  content: ContentType[];
+  title: string;
+  link: string;
+  linkBtnLabel: string;
+  categories: CategoryIcon[];
+  onClosePanel: () => void;
 }

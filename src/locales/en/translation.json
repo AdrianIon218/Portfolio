@@ -49,7 +49,8 @@
   "project": {
     "dependencies": "Other dependencies:",
     "currentPage": "The current page",
-    "qrCode": "QR code"
+    "qrCode": "QR code",
+    "view": "View details"
   },
   "present": "present",
   "monthNames": [

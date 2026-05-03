@@ -163,17 +163,19 @@ body:has(.backdrop) {
   overflow-y: hidden;
 }
 
-/*
- Firefox doesn't support scrollbar styles
-*/
+@media only screen and (max-width: 1000px) {
+  .cardsContainer {
+    margin-top: 3rem;
+  }
+}
 
-@supports selector(body::-webkit-scrollbar) {
+@media only screen and (min-width: 750px) {
   body:has(.backdrop) nav {
-    padding-right: 20px;
+    padding-right: 1.25rem;
   }
 
   body:has(.backdrop) .cardsContainer {
-    padding-right: 1rem;
+    padding-right: 0.95rem;
   }
 }
 
@@ -334,12 +336,6 @@ body:has(.backdrop) {
 @media only screen and (min-width: 420px) {
   .projectPresentation p {
     hyphens: none;
-  }
-}
-
-@media only screen and (max-width: 1000px) {
-  .cardsContainer {
-    margin-top: 3rem;
   }
 }
 

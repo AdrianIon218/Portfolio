@@ -8,7 +8,9 @@ export default function Skill(props: ISkillListProps) {
 
   const softwareSkillElements = useMemo(() => {
     return props.softwareSkills.map((item) => (
-      <li key={item.name}>{item.name}</li>
+      <li key={item.name}>
+        <span>{item.name}</span>
+      </li>
     ));
   }, [props.softwareSkills]);
 

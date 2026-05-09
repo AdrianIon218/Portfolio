@@ -66,7 +66,7 @@
   grid-template-columns: 1fr 1fr;
   grid-row: max-content;
   list-style-type: none;
-  row-gap: 0.3rem;
+  row-gap: 0.2rem;
   column-gap: 4rem;
   font-weight: 700;
   align-items: center;
@@ -90,11 +90,17 @@
 }
 
 .softSkillsCtn li {
-  padding: 0.2rem 0.7rem;
+  padding: 0.4rem 0.5rem;
   cursor: default;
   text-align: center;
   border-radius: 0.25rem;
   transition: all 0.1s;
+  transform: skewY(-2deg);
+}
+
+.softSkillsCtn li span {
+  display: inline-block;
+  transform: skewY(2deg);
 }
 
 .softSkillsCtn li:hover {

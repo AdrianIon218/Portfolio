@@ -23,7 +23,7 @@
 
 .sillsContainer {
   display: flex;
-  gap: 3rem;
+  gap: 4rem;
   flex-direction: column;
   align-items: center;
   background:
@@ -42,6 +42,7 @@
   border-radius: 0.3rem;
   padding: 3rem;
   padding-top: 4rem;
+  padding-bottom: 5rem;
 }
 
 .title {
@@ -54,8 +55,9 @@
 .skillListCtn {
   display: flex;
   width: 100%;
-  gap: 1rem;
+  gap: 3rem;
   flex-direction: column;
+  align-items: center;
 }
 
 .softSkillsCtn {
@@ -64,13 +66,48 @@
   grid-template-columns: 1fr 1fr;
   grid-row: max-content;
   list-style-type: none;
-  row-gap: 0.2rem;
-  column-gap: 5rem;
-  font-weight: 600;
+  row-gap: 0.3rem;
+  column-gap: 4rem;
+  font-weight: 700;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+}
+
+.subtitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #0b7171;
+  margin: 0;
+  margin-bottom: 2.5rem;
+}
+
+.subtitle.languages {
+  margin-bottom: 1.5rem;
+}
+
+.softSkillsCtn li {
+  padding: 0.2rem 0.7rem;
+  cursor: default;
+  text-align: center;
+  border-radius: 0.25rem;
+  transition: all 0.1s;
+}
+
+.softSkillsCtn li:hover {
+  background-color: #0b7171;
+  color: white;
 }
 
 .languageCtn {
   list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 700;
 }
 
 @media only screen and (max-width: 500px) {
@@ -78,7 +115,4 @@
     grid-template-columns: 1fr;
     column-gap: 0px;
   }
-}
-
-@media only screen and (max-width: 1000px) {
 }

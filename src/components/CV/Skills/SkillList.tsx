@@ -23,7 +23,7 @@ export default function Skill(props: ISkillListProps) {
   return (
     <div className={classes.skillListCtn}>
       <div>
-        <h3>
+        <h3 className={classes.subtitle}>
           <i className="fas fa-laptop-code" />
           &nbsp;{t("skills.software")}
         </h3>
@@ -31,7 +31,7 @@ export default function Skill(props: ISkillListProps) {
       </div>
 
       <div>
-        <h3>
+        <h3 className={`${classes.subtitle} ${classes.languages}`}>
           <i className="fas fa-apple-alt" />
           &nbsp;{t("skills.languages")}
         </h3>

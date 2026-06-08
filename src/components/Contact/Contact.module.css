@@ -194,6 +194,7 @@
   }
 
   .contactContainer {
+    min-width: 90vw;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
   }
